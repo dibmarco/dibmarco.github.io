@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+
+body {
+	background-color: white;
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+header {
+	background-color: #333;
+	color: white;
+	padding: 10px;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	display: inline-block;
+}
+
+nav ul li a {
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	color: white;
+}
+
+nav ul li a:hover {
+	background-color: #0066cc;
+    border-radius: 10%;
+    transition: 0.5s;
+}
+
+main {
+	margin: 50px auto;
+	max-width: 1500px;
+	padding: 0 20px;
+	text-align: center;
+}
+
+
+.product-box {
+	display: inline-block;
+	margin: 20px;
+	background-color: #f2f2f2;
+	padding: 20px;
+	text-align: center;
+    height: 300px;
+    width: 300px;
+}
+
+.product-box img {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+
+.product-box h2 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.product-box p {
+	margin: 0;
+}
+
+
+</style>
+
+
+<head>
+	<title>Simple Website</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Our Products</a></li>
+				<li><a href="#">Our Team</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h1>Welcome to our website!</h1>
+		<p>We are a company that specializes in X, Y, and Z.</p>
+	
+
+    
+		<div class="product-box">
+			<a href="#">
+				<img src="cake.jpg" alt="Cakes">
+			</a>
+			<h2>Cakes</h2>
+			<p>Discover our delicious selection of cakes.</p>
+		</div>
+		<div class="product-box">
+			<a href="#">
+				<img src="cookies.jpg" alt="Cookies">
+			</a>
+			<h2>Cookies</h2>
+			<p>Explore our wide range of cookies.</p>
+		</div>
+		<div class="product-box">
+			<a href="#">
+				<img src="bread.jpg" alt="Bread">
+			</a>
+			<h2>Bread</h2>
+			<p>Try our freshly baked breads.</p>
+		</div>
+	
+    </main>
+
+</body>
+</html>

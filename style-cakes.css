@@ -7,9 +7,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-header,
-main,
-footer {
+header, main, footer {
     box-sizing: border-box;
 }
 
@@ -79,8 +77,12 @@ nav ul li a {
 }
 
 main {
-    margin: 5% 20%; 
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 5%; 
     padding: 0;
+    text-align: center;
 }
 
 
@@ -95,10 +97,20 @@ main p {
     width: 400px;
 }
 
-.cake-description {
+main div {
     display: inline-block;
-    margin: 20px;
-    text-align: center; 
+    height: 400px;
+    width: 400px;
+    margin: 0;
+    padding: 10px 0px 10px 0px;
+}
+
+.cake-image {
+    margin-right: 30px; 
+}
+
+.cake-description {
+    text-align: justify;
 }
 
 

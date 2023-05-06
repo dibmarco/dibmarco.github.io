@@ -77,11 +77,11 @@ nav ul li a {
 }
 
 main {
-    margin-top: 5%;
+    margin-top: 3%;
     margin-left: 15%;
     margin-right: 15%;
     margin-bottom: 3%; 
-    padding: 0;
+    padding: 3px;
     text-align: center;
 }
 
@@ -92,27 +92,46 @@ main h1 {
     text-align: center;
 }
 
+main div h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    margin: 2px;
+    text-align: left;
+}
+
 main p {
     text-align: justify;
-    width: 400px;
+    margin: 10px;
+    font-size: 18px;
 }
 
 main div {
-    display: inline-block;
-    height: 400px;
-    width: 400px;
-    margin: 0;
-    padding: 10px 0px 10px 0px;
+    border: 5px solid brown;
+    border-style: outset;
+    padding: 10;
+    overflow: hidden;
+    margin-bottom: 35px;
 }
 
-.cake-image {
-    margin-right: 30px; 
+main div:hover {
+    background-color: beige;
+    transition: 0.5s ease;
 }
 
-.cake-description {
-    text-align: justify;
+.cake1pic {
+    float: left;
+    margin-right: 20px;
 }
 
+.cake2pic {
+    float: right;
+    margin-left: 20px;
+}
+
+.cake3pic {
+    float: left;
+    margin-right: 20px;
+}
 
 footer {
     background-color: #332421;

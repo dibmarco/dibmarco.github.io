@@ -118,6 +118,28 @@ main div:hover {
     transition: 0.5s ease;
 }
 
+button {
+background-color: red;
+color: white;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 18px;
+height: 25px;
+width: 130px;
+margin-left: 3px;
+margin-bottom: 3px;
+margin-top: 20px;
+}
+
+.button-right {
+    float: right;
+    margin-right: 5px;
+}
+
+.button-left {
+    float: left;
+    margin-left: 5px;
+}
+
 .cake1pic {
     float: left;
     margin-right: 20px;

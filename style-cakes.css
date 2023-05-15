@@ -106,6 +106,10 @@ main p {
     font-size: 18px;
 }
 
+p::first-letter {
+    initial-letter: 3;
+}
+
 main div {
     border: 5px solid brown;
     border-style: outset;

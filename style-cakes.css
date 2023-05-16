@@ -106,7 +106,7 @@ main p {
     font-size: 18px;
 }
 
-p::first-letter {
+main p::first-letter {
     initial-letter: 3;
 }
 

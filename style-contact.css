@@ -122,7 +122,7 @@ input {
 
 fieldset {
     border-color: #c2380e;
-    margin-top: 2%;
+    margin-top: 1%;
 }
 
 legend {
@@ -145,6 +145,7 @@ button {
     height: 25px;
     text-align: center;
     margin-top: 10px;
+    margin-bottom: 15px;
     background-color:#c2380e;
     color: white;
 }

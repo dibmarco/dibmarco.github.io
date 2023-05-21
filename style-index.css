@@ -86,10 +86,7 @@ nav ul li a {
 }
 
 main {
-    margin-top: 7%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 7%;
+    margin: 8% auto 8vh auto;
     padding: 0;
     text-align: center;
 }
@@ -112,6 +109,8 @@ main div a {
 main h1 {
     font-family: 'Dancing Script', cursive;
     font-size: 50px;
+    margin: 8vh auto 0 auto;
+    padding: 0;
 }
 
 .product-box {

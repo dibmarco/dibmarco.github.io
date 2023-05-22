@@ -75,7 +75,8 @@ nav ul li a {
 }
 
 .fa-twitter,
-.fa-instagram {
+.fa-instagram,
+.fa-github {
     font-size: 15px;
 }
 
@@ -182,10 +183,9 @@ Portanto, "absolutes" ~gravitam em torno~ de "relatives" */
 }
 
 footer {
+    display: flex;
     background-color: #332421;
     color: white;
-    padding: 0;
-    margin: 0;
     position: fixed;
     width: 100%;
     height: 1vp;
@@ -194,10 +194,15 @@ footer {
     text-align: center;
     font-size: smaller;
     z-index: 99;
-    opacity: 98%;
+    opacity: 95%;
+    justify-content: center;
 }
 
 footer a {
     text-decoration: none;
     color: white;
+}
+
+footer i {
+    margin-left: 5px;
 }

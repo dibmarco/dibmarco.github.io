@@ -127,10 +127,12 @@ input {
 fieldset {
     border-color: #c2380e;
     margin-top: 1.5vh;
+    background-color: rgba(245, 245, 245, 0.5);
 }
 
 legend {
     font-weight: bold;
+    background-color: white;
 }
 
 textarea {

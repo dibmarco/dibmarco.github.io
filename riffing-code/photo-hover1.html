@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Hover 1</title>
+</head>
+
+<style>
+
+div {
+    display: flex;
+    height: 410px;
+    width: 410px;
+    margin: 5% auto 1% auto;
+    text-align: center;
+    background-image: url(./imgs/img2.png);
+    background-size:cover; 
+    background-repeat: no-repeat;
+    transition: 0.4s ease;
+}
+
+div:hover {
+    background-image: url(./imgs/img3.jpg);
+}
+
+h1 {
+    text-align: center;
+    box-sizing: border-box;
+}
+
+</style>
+
+<body>
+    <div></div>
+    <h1>efeito de transição de imagem - sobrepõe</h1>
+</body>
+</html>

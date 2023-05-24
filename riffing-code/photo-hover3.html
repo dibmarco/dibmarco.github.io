@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Hover 3</title>
+</head>
+
+<style>
+
+.container {
+    margin: 10% auto;
+    text-align: center;
+    z-index: -1000;
+}
+
+.img1, .img2 {
+    display: inline-block;
+    opacity: 30%;
+}
+
+.img1 {
+    width: 250px;
+    height: 250px;
+    margin-right: 35px;
+    background-image: url(./imgs/img2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+}
+
+.img2 {
+    width: 250px;
+    height: 250px;
+    background-image: url(./imgs/img3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+}
+
+.img1:hover, .img2:hover {
+    transform:translateY(-3px);
+    opacity: 100%;
+}
+
+</style>
+
+<body>
+
+<div class="container">
+<div class="img1"></div>
+<div class="img2"></div>
+</div>
+
+</body>
+</html>

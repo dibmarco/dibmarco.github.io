@@ -139,13 +139,9 @@ main img:hover {
         }
 
     
-        main article p::first-letter {
-            font-size: 1.5rem;
-        }
-
-        main article p {
-            background-color: black;
-        }
+        main article p:first-of-type::first-letter {
+        font-size: 1.5rem;
+}
     
         main img {
             float: unset;

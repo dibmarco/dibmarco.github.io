@@ -138,10 +138,13 @@ main img:hover {
             font-size: 28px;
         }
 
-    
         main article p:first-of-type::first-letter {
-        font-size: 1.5rem;
-}
+            font-size: 1.5rem;
+        }
+    
+        main article p {
+            text-indent: 1.5em;
+        }
     
         main img {
             float: unset;

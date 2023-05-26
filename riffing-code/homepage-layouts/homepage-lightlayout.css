@@ -6,8 +6,8 @@
 }
 
 html {
-    text-align: center;
     margin: 0 auto 0 auto;
+    box-sizing: border-box;
 }
 
 a {
@@ -67,6 +67,7 @@ header nav ul li i:hover {
 }
 
 main {
+    position: relative;
     margin: 150px 15% 3vh 15%;
     text-align: justify;
     font-size: 20px;
@@ -83,8 +84,17 @@ main h2 {
     padding-bottom: 15px;
 }
 
-main article p::first-letter {
-    initial-letter: 3;
+main article p:first-of-type::first-letter {
+    font-size: 2.5rem;
+}
+
+main article p:first-of-type {
+    text-indent: 0;
+}
+
+main article p {
+    margin: 0;
+    text-indent: 2em;
 }
 
 main img {
@@ -101,7 +111,7 @@ main img:hover {
 
 @media only screen and (max-width: 700px) {
 
-    header h1 {
+   header h1 {
         text-align: left;
         font-size: 38px;
         margin: 2rem 5% 1rem 5%;
@@ -127,9 +137,14 @@ main img:hover {
         main h1 {
             font-size: 28px;
         }
+
     
         main article p::first-letter {
-            font-size: larger;
+            font-size: 1.5rem;
+        }
+
+        main article p {
+            background-color: black;
         }
     
         main img {
@@ -141,7 +156,7 @@ main img:hover {
         }
 
         footer {
-        text-align: center;
+            margin: 0 5% 1% 5%;
         }
 
 }

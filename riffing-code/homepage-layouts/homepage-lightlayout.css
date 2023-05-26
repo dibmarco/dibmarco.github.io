@@ -109,9 +109,24 @@ main img:hover {
     opacity: 100%;
 }
 
+footer {
+    text-align: right;
+    margin: 0 15% 1% 15%;
+}
+
+footer span {
+    font-style: italic;
+    font-weight: lighter;
+    padding-right: 5px;
+}
+
+footer i {
+    padding-left: 5px;
+}
+
 @media only screen and (max-width: 700px) {
 
-        header h1 {
+   header h1 {
         text-align: left;
         font-size: 38px;
         margin: 2rem 5% 1rem 5%;
@@ -138,10 +153,10 @@ main img:hover {
             font-size: 28px;
         }
 
-        main article p:first-of-type::first-letter {
+        main article p::first-letter:first-of-type {
             font-size: 1.5rem;
         }
-    
+
         main article p {
             text-indent: 1.5em;
         }
@@ -158,19 +173,4 @@ main img:hover {
             margin: 0 5% 1% 5%;
         }
 
-}
-
-footer {
-    text-align: right;
-    margin: 0 15% 1% 15%;
-}
-
-footer span {
-    font-style: italic;
-    font-weight: lighter;
-    padding-right: 5px;
-}
-
-footer i {
-    padding-left: 5px;
 }

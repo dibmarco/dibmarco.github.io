@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Sedgwick+Ave+Display&display=swap');
+
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+header, main, footer {
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #332421;
+    color: white;
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1vp;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.menu-items li a:hover {
+    background-color: #c2380e;
+    border-radius: 5%;
+    transition: 0.5s ease;
+}
+
+.social-icons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.social-icons li {
+    margin: 0 10px;
+}
+
+.social-icons li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+}
+
+.fa-twitter,
+.fa-instagram,
+.fa-github {
+    font-size: 15px;
+}
+
+
+main {
+    margin: 3% auto; 
+    padding: 3px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+main h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    text-align: center;
+    margin: 8vh auto 0 auto;
+    padding: 0;
+}
+
+main div h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    margin: 2px;
+    text-align: left;
+}
+
+main p {
+    text-align: justify;
+    margin: 10px;
+    font-size: 18px;
+}
+
+main p::first-letter {
+    initial-letter: 3;
+}
+
+main div {
+    border: 5px solid brown;
+    border-style: outset;
+    padding: 10;
+    overflow: hidden;
+    margin: 3% auto;
+    max-width: 1100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* position: relative - com "relative" a div seria a referência, o elemento ao redor do qual
+    outros elementos com position "absolute" orbitariam*/
+}
+
+main div:last-of-type {
+    margin-bottom: 30px;
+}
+
+main div:hover {
+    background-color: beige;
+    transition: 0.5s ease;
+}
+
+main img {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+button {
+background-color: red;
+color: white;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 18px;
+height: 25px;
+width: 130px;
+margin-bottom: 1%;
+margin-top: 3.5%;
+/* position: absolute - Aqui, com "absolute", o botão é filho da div. 
+Sendo assim, o botão "gravita ao redor da div", que consta como "relative" - 
+a posição dele depende da posição da div).
+Portanto, "absolutes" ~gravitam em torno~ de "relatives" */
+}
+
+.button-right {
+   float: right;
+   margin-right: 5px;
+   /* right: 5px;
+    bottom: 5px; 
+    -- esses valores alinham o botão conforme a borda da div */
+}
+
+.button-left {
+    float: left;
+    margin-left: 5px;
+    }
+
+.cake1pic {
+    float: left;
+    margin-right: 20px;
+}
+
+.cake2pic {
+    float: right;
+    margin-left: 20px;
+}
+
+.cake3pic {
+    float: left;
+    margin-right: 20px;
+}
+
+footer {
+    display: flex;
+    background-color: #332421;
+    color: white;
+    position: fixed;
+    width: 100%;
+    height: 1vp;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    font-size: smaller;
+    z-index: 99;
+    opacity: 95%;
+    justify-content: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer i {
+    margin-left: 5px;
+}
+
+footer span {
+    font-style: italic;
+    font-weight: lighter;
+}

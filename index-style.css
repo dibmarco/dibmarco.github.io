@@ -74,3 +74,13 @@ div {
     color: black;
     padding-left: 15px;
 }
+
+::selection {
+    background: black;
+    color: white;
+}
+
+::-moz-selection {
+    background: black;
+    color: white;
+}

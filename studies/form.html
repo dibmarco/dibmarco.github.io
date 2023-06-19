@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="riffraff.css">
+    <title>Form</title>
+</head>
+<body>
+
+    <main>
+
+        <h1>This is what a properly built Formulary looks like.</h1>
+
+        <hr>
+
+        <article id="contact">
+
+            <h2>Contact Me</h2>
+            
+            <p>I'd really like to hear from you! &#40;<u>Actually not.</u>&#41;</p>
+
+            <form action="https://httpbin.org/get" method="get">
+
+                <p>
+                <label for="firstName">First Name:</label>
+                <input type="text" name="firstName" id="firstName" required autofocus>
+                </p>
+
+                <p>
+                <label for="lastName">Last Name:</label>
+                <input type="text" name="lastName" id="lastName" required>
+                </p>
+                
+                <p>
+                <label for="password">Password:</label>
+                <input type="password" name="password" placeholder="Enter Password" id="password" required>
+                </p>
+
+                <p>
+                <label for="phone">Phone:</label>
+                <input type="tel" name="phone" id="phone" placeholder="5555555555" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+                </p>
+
+                <p>
+                <label for="decade">Favorite Decade:</label>
+                <input type="number" name="decade" id="decade" min="1950" max="2020" step="10" value="1980">
+                </p>
+
+                <p>
+                    <label for="coffee">Favorite Coffee:</label>
+                    <select name="coffee" id="coffee">
+                        <optgroup label="Coffees">
+                            <option value="regularCoffee">Regular Coffee</option>
+                            <option value="icedCoffee">Iced Coffee</option>
+                        </optgroup>
+
+                        <optgroup label="Espresso Drinks">
+                            <option value="cappuccino">Cappucino</option>
+                            <option value="cortado">Cortado</option>
+                            <option value="americano">Americano</option>
+                        </optgroup>
+
+                        <option value="other">Other</option>
+                    </select>
+                </p>
+
+            </form>
+
+        </article>
+
+        <hr>
+
+        <img src="./imgs/coffee.png" alt="coffee" width="200px" style="margin-left: 60%;">
+
+    </main>
+    
+</body>
+</html>

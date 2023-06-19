@@ -68,12 +68,12 @@ table, tr, th, td, caption {
     padding: 10px;
 }
 
-.navBottom {
+.navbottom {
     text-align: right;
     font-size: smaller;
 }
 
-.navBottom select, option {
+.navbottom select, option {
     font-size: 12px;
 }
 

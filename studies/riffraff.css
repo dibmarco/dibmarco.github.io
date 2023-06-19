@@ -68,6 +68,15 @@ table, tr, th, td, caption {
     padding: 10px;
 }
 
+.navBottom {
+    text-align: right;
+    font-size: smaller;
+}
+
+.navBottom select, option {
+    font-size: 12px;
+}
+
 input {
     background-color: whitesmoke;
     color: black;

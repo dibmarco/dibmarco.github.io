@@ -94,6 +94,51 @@ optgroup {
     color: black;
 }
 
+.favoritefood {
+    display: flex;
+}
+
+.favoritefood label {
+    margin-right: 15px;
+}
+
+.pets {
+    display: flex;
+}
+
+.pets label {
+    margin-right: 15px;
+}
+
+.note textarea {
+    background-color: antiquewhite;
+    color: black;
+    font-family: verdana;
+}
+
+.note label, textarea {
+    margin-left: 5%;
+}
+
+.buttons {
+    text-align: right;
+}
+
+button {
+    background-color: whitesmoke;
+    color: black;
+    width: 80px;
+    text-align: center;
+}
+
+.quote {
+    display: flex;
+}
+
+.quote img {
+    margin-top: 35px;
+}
+
 table th {
     font-size: large;
 }

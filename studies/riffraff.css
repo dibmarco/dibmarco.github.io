@@ -63,7 +63,8 @@ table  {
 
 table, tr, th, td, caption {
     border: 1px solid white;
-    font-family: 'Times New Roman';
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
     border-collapse: collapse;
     padding: 10px;
 }
@@ -80,17 +81,19 @@ table, tr, th, td, caption {
 input {
     background-color: whitesmoke;
     color: black;
-    font-family: Verdana;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
 }
 
 select, option {
     background-color: whitesmoke;
     color: black;
-    font-family: Verdana;
+    font-family: Arial, Helvetica, sans-serif
+    font-size: 16px;
 }
 
 optgroup {
-    background-color: lightgrey;
+    background-color: whitesmoke;
     color: black;
 }
 
@@ -111,9 +114,10 @@ optgroup {
 }
 
 .note textarea {
-    background-color: antiquewhite;
+    background-color: whitesmoke;
     color: black;
-    font-family: verdana;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
 }
 
 .note label, textarea {

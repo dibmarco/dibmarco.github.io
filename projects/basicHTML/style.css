@@ -1,0 +1,101 @@
+*  {
+    margin: 1px 5px 1px 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    opacity: 80%;
+}
+
+a:hover {
+    text-decoration: underline;
+    opacity: 100%;
+}
+
+body {
+    margin: 1% auto 0 auto;
+    width: 650px;
+    text-align: justify;
+    border: 1px solid black;
+}
+
+header {
+    text-align: center;
+}
+
+header nav ul {
+    display: inline-flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0;
+    padding: 0 5px 0 5px;
+}
+
+main h2, h3, img, p {
+    margin-left: 6%;
+}
+
+main details, summary {
+    margin-left: 4%;
+}
+
+main p {
+    width: 85%;
+    padding: 3px;
+}
+
+main table {
+    width: 250px;
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+
+main div blockquote {
+    margin: 0 5% 0 20%;
+}
+
+main div blockquote p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main form {
+    width: 85%;
+    margin: 0 auto 0 auto;
+}
+
+main form input, textarea {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+.visit {
+    display: flex;
+}
+
+main form div {
+    text-align: right;
+}
+
+main form div button {
+    width: 80px;
+}
+
+footer div {
+    text-align: right;
+    font-size: smaller;
+}
+
+footer div label {
+    margin: -3px;
+}
+
+footer p {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 12px;
+    margin-top: 15px;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./imgs/favicon.ico">
+    <title>Contact</title>
+</head>
+<body>
+    
+<header>
+
+    <h1>The Coffee Joint</h1>
+    <img src="./imgs/logo.jpg" alt="The Coffee Joint" width="200px">
+
+    <p>~coffee for the people~</p><br>
+
+    <hr>
+    <nav>
+        <ul>
+            <a href="index.html"><li>Home</li></a>
+            <a href="index.html#aboutus"><li>About Us</li></a>
+            <a href="index.html#featuredproducts"><li>Featured Products</li></a>
+        </ul>
+    </nav>
+    <hr>
+
+</header>
+
+<main>
+
+    <article>
+    
+    <br>
+
+    <h2>Contact</h2>
+    <p>Should you want to get in touch with us, please fill out the form below:</p>
+
+    <br>
+    
+    <form action="https://httpbin.org/get" method="get">
+    
+    <fieldset>
+    <legend>Your info:</legend>
+    
+    <p>
+    <label for="firstName">First Name:</label>
+    <input type="text" name="firstName" id="firstName" required autofocus>
+    </p>
+    
+    <p>
+    <label for="lastName">Last Name:</label>
+    <input type="text" name="lastName" id="lastName" required>
+    </p>
+
+    <p>
+    <label for="email">E-mail:</label>
+    <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="username@email.com">
+    </p>
+
+    <p>
+    <label for="coffee">Favorite Coffee:</label>
+    <select name="coffee" id="coffee">
+        <option value="houseBlend">House Blend</option>
+        <option value="strongBeans">Strong Beans</option>
+        <option value="theFreshOne">The Fresh One</option>
+    </select>
+    </p>
+
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+    <legend>Where do you prefer to enjoy your coffee?</legend>
+
+    <p>
+    <input type="radio" name="inout" id="in" value="in">
+    <label for="in">Inside Area</label>
+    </p>
+
+    <p>
+    <input type="radio" name="inout" id="out" value="out">
+    <label for="out">Outside Area</label>
+    </p>
+
+    </fieldset>
+
+    <br>
+
+    <fieldset class="visit">
+    <legend>You usually visit us for:</legend>
+
+    <p>
+    <input type="checkbox" name="visit" id="leisure" value="leisure">
+    <label for="leisure">Leisure</label>
+    </p>
+    
+    <p>
+    <input type="checkbox" name="visit" id="work" value="work">
+    <label for="work">Work</label>
+    </p>
+    
+    <p>
+    <input type="checkbox" name="visit" id="other" value="other">
+    <label for="other">Other</label>
+    </p>
+
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+    <legend>Send us a message!</legend>
+    <label for="message">Write your notes, opinions, and comments.</label>
+    <br>
+    <textarea name="message" id="message" cols="45" rows="8" placeholder="Enter your text here."></textarea>
+    </fieldset>
+
+    <div>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    </div>
+    
+    </form>
+
+    <br>
+
+    </article>
+
+</main>
+
+<footer>
+    <hr>
+    <div>
+        <label for="navBottom">Jump to:</label>
+        <select name="navBottom" id="navBottom" onchange="location = this.value;">
+            <option selected disabled selected>-Page Section-</option>
+            <option value="index.html">/Home/</option>
+            <option value="index.html#aboutus">/About Us/</option>
+            <option value="index.html#featuredproducts">/Featured Products/</option>
+            <option value="contact.html">/Conctact/</option>
+        </select>
+    </div>
+    <hr>
+    <p>&#9827;&nbsp;marco dib - let it rip&nbsp;&#9827;</p>
+    </footer>
+
+</body>
+</html>

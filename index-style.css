@@ -16,14 +16,22 @@ main {
 }
 
 .photo {
+    display: flex;
+    height: 250px;
+    width: 250px;
+    margin: 1%;
     text-align: center;
-    width: 300px;
+    background-image: url(../index-imgs/profile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.7s ease;
+    border: solid black;
+    border-radius: 50%;
 }
 
-.photo img {
-    border-radius: 50%;
-    border: solid black;
-}
+.photo:hover {
+    background-image: url(../index-imgs/profile2.jpg);
+        }
 
 .projectlist {
     text-align: center;

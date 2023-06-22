@@ -1,4 +1,4 @@
-*  {
+* {
     margin: 1px 5px 1px 5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -25,21 +25,48 @@ header {
     text-align: center;
 }
 
-header nav ul {
-    display: inline-flex;
-    list-style: none;
+nav {
+    width: 100%;
 }
 
-header nav ul li {
-    margin: 0;
-    padding: 0 5px 0 5px;
+nav ul {
+    display: flex;
+    height: 30px;
+}
+
+nav ul li {
+    list-style: none;
+    position: relative;
+    margin-left: 39px;
+    padding: 2px 20px 0 20px;    
+    background-color: white;
+}
+
+nav ul li:hover {
+    background-color: whitesmoke;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+}
+
+nav ul li:hover ul {
+    display: block;
+    opacity: 85%;
+}
+
+nav ul li ul li {
+    padding: 5px 20px;
+    width: 115px;
 }
 
 main h2, h3, img, p {
     margin-left: 6%;
 }
 
-main details, summary {
+main details,
+summary {
     margin-left: 4%;
 }
 
@@ -67,7 +94,8 @@ main form {
     margin: 0 auto 0 auto;
 }
 
-main form input, textarea {
+main form input,
+textarea {
     font-family: 'Times New Roman', Times, serif;
     font-size: 18px;
 }

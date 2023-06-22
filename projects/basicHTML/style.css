@@ -43,22 +43,24 @@ nav ul li {
 }
 
 nav ul li:hover {
-    background-color: whitesmoke;
+    background-color: beige;
 }
 
 nav ul li ul {
     display: none;
     position: absolute;
+    margin: 5px 0 0 -60px;
 }
 
 nav ul li:hover ul {
     display: block;
-    opacity: 85%;
+    opacity: 90%;
 }
 
 nav ul li ul li {
     padding: 5px 20px;
     width: 115px;
+    background-color: whitesmoke;
 }
 
 main h2, h3, img, p {

@@ -1,0 +1,153 @@
+* {
+    background-color: black;
+    color: antiquewhite;
+    font-family: Verdana;
+    text-align: justify;
+}
+
+body {
+    width: 550px;
+    margin: 1% auto 1% auto;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 3px 0 0 0;
+}
+
+p {
+    font-size: 14px;
+}
+
+a {
+    color: grey;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+figure {
+    display: inline-block;
+}
+
+.figures {
+    text-align: center;
+}
+
+img {
+    border-radius: 50%;
+    opacity: 90%;
+}
+
+img:hover {
+    opacity: 100%;
+}
+
+footer p {
+    text-align: right;
+}
+
+mark {
+    background-color: red;
+}
+
+table  {
+    margin: 0 auto 0 auto;
+}
+
+table, tr, th, td, caption {
+    border: 1px solid white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+.navbottom {
+    text-align: right;
+    font-size: smaller;
+}
+
+.navbottom select, option {
+    font-size: 12px;
+}
+
+input {
+    background-color: whitesmoke;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+select, option {
+    background-color: whitesmoke;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif
+    font-size: 16px;
+}
+
+optgroup {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.favoritefood {
+    display: flex;
+}
+
+.favoritefood label {
+    margin-right: 15px;
+}
+
+.pets {
+    display: flex;
+}
+
+.pets label {
+    margin-right: 15px;
+}
+
+.note textarea {
+    background-color: whitesmoke;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.note label, textarea {
+    margin-left: 5%;
+}
+
+.buttons {
+    text-align: right;
+}
+
+button {
+    background-color: whitesmoke;
+    color: black;
+    width: 80px;
+    text-align: center;
+}
+
+.quote {
+    display: flex;
+}
+
+.quote img {
+    margin-top: 35px;
+}
+
+table th {
+    font-size: large;
+}
+
+::selection {
+    background: yellow;
+    color: grey;
+}

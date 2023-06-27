@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1rem;
+    font-family: monospace;
+}
+
+h1, h2 {
+    color: blue;
+    padding: 0.5rem;
+}
+
+p {
+    color: purple;
+}
+
+p span {
+    text-transform: uppercase;
+    background-color: gold;
+}
+
+.grey {
+    color: grey;
+}
+
+#second {
+    font-style: italic;
+}
+
+p, .grey, #grey {
+    text-align: justify;
+    width: 50ch;
+    background-color: skyblue;
+    padding: 0.3rem;
+}

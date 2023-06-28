@@ -14,6 +14,7 @@
     }
 
     header {
+        border-bottom: 1px solid;
         display: inline-flex;
         width: 100%;
         height: 6vh;
@@ -25,9 +26,8 @@
         z-index: 1;
     }
 
-
     main {
-        width: 80%;
+        width: 85%;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
@@ -36,18 +36,26 @@
         z-index: 0;
     }
 
+.container {
+    margin: 20px;
+    height: 285px;
+    width: 285px;
+    background-color: beige;
+    border: 1px black solid;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    }
+
     .img {
-        margin: 15px;
-        height: 300px;
-        width: 300px;
-        background-color: beige;
-        border: 1px black solid;
-        border-radius: 5px;
-        overflow: hidden;
+        transition: 0.5s ease;
+        opacity: 97%;
     }
 
     .img:hover {
-        opacity: 80%;
+        transform: scale(1.1);
+        transition: 0.3s ease;
+        opacity: 100%;
     }
 
 
@@ -64,36 +72,36 @@
     
     <main>
 
-        <div class="img">
-            <img src="../projects/bakery/imgs/bread.jpg" alt="bread" width="299" height="299" loading="lazy">
+        <div class="container">
+            <img src="../projects/bakery/imgs/bread.jpg" alt="bread" width="284" height="284" loading="lazy" class="img">
         </div>
 
-        <div class="img">
-            <img src="../projects/bakery/imgs/cake.jpg" alt="bread" width="299" height="299" loading="lazy">
+        <div class="container">
+            <img src="../projects/bakery/imgs/cake.jpg" alt="bread" width="284" height="284" loading="lazy" class="img">
         </div>
 
-        <div class="img">
-            <img src="../projects/bakery/imgs/cookies.jpg" alt="bread" width="299" height="299" loading="lazy">
+        <div class="container">
+            <img src="../projects/bakery/imgs/cookies.jpg" alt="bread" width="284" height="284" loading="lazy" class="img">
         </div>
 
-        <div class="img">
-            <img src="../index-imgs/profile.jpg" alt="bread" width="299" height="299" loading="lazy">
+        <div class="container">
+            <img src="../index-imgs/profile.jpg" alt="bread" width="284" height="284" loading="lazy" class="img">
         </div>
         
-        <div class="img">
-            <img src="../projects/lightlayout/imgs/books-small.jpg" alt="bread" width="299" height="299" loading="lazy">
+        <div class="container">
+            <img src="../projects/lightlayout/imgs/books-small.jpg" alt="bread" width="284" height="284" loading="lazy" class="img">
         </div>
         
-        <div class="img">
-            <img src="../projects/basicHTML/imgs/logo.jpg" alt="bread" width="299" height="299" loading="lazy">
+        <div class="container">
+            <img src="../projects/basicHTML/imgs/logo.jpg" alt="bread" width="284" height="284" loading="lazy" class="img">
         </div>
 
-        <div class="img">
-            <img src="../projects/basicHTML/imgs/coffee2.jpg" alt="bread" width="299" height="299" loading="lazy">
+        <div class="container">
+            <img src="../projects/basicHTML/imgs/coffee2.jpg" alt="bread" width="284" height="284" loading="lazy" class="img">
         </div>
         
-        <div class="img">
-            <img src="../projects/basicHTML/imgs/coffee1.jpg" alt="bread" width="299" height="299" loading="lazy">
+        <div class="container">
+            <img src="../projects/basicHTML/imgs/coffee1.jpg" alt="bread" width="284" height="284" loading="lazy" class="img">
         </div>
 
     </main>

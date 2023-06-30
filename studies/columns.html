@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Columns</title>
+</head>
+
+<style>
+
+* {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+
+main {
+    width: 80%;
+    margin: 15vh auto;
+}
+
+.columns {
+    column-count: 4;
+    column-width: 180px;
+    column-gap: 3rem;
+    column-rule: 1px solid black;
+}
+
+.columns p {
+    margin-top: 0;
+}
+
+.columns h2 {
+    margin-top: 0;
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
+    break-inside: avoid;
+    /* break-before: column; */
+}
+
+.columns .quote {
+    margin-top: 1.5rem;
+    font-size: 2.5rem;
+    text-align: center;
+    column-span: all;
+}
+
+.nowrap {
+    white-space: nowrap;
+    font-size: inherit;
+}
+
+</style>
+
+<body>
+    
+<main>
+
+    <section class="columns">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus similique neque eos tempore officia sit error modi, illum dolor impedit?</p>
+        <p>Iure esse dolore neque cum consequuntur temporibus officiis praesentium explicabo. Corrupti sunt nesciunt similique! Unde magnam necessitatibus ratione error incidunt.</p>
+        <h2>Next Topic</h2>
+        <p class="quote">&#8220;Where's my rug, man?&#8221; <span class="nowrap">&#8211; The Dude</span></p>
+        <p>Consectetur, dignissimos voluptas? At aut repudiandae repellendus accusantium eligendi omnis facilis magnam iure dolorum! Iusto magni hic modi laudantium laborum?</p>
+        <p>Incidunt, eius inventore officiis nam aliquam dolores! Et, quisquam? Sit pariatur ab maxime reiciendis consequuntur repellendus omnis vitae soluta nisi.</p>
+    </section>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit excepturi inventore optio esse fuga ipsa aut harum architecto eum deserunt.</p>
+
+</main>
+
+</body>
+</html>

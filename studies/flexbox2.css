@@ -141,6 +141,14 @@ footer {
         width: 100px;
     }
 
+    .articleone {
+        font-size: 1.2rem;
+    }
+    
+    .articleone h1 {
+        font-size: 2.2rem;
+    }
+
     .articletwo {
         min-height: fit-content;
     }
@@ -149,4 +157,7 @@ footer {
         font-size: 22px;
     }
 
+    .sectiontwo div {
+    font-size: 0.8rem;
+    }
 }

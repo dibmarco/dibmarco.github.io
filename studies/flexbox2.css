@@ -22,6 +22,8 @@ main {
     text-align: justify;
     width: fit-content;
     padding: 15px;
+    background-color: #efeff679;
+    border-radius: 10px;
 }
 
 .mainsection {

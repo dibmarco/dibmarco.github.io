@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    background-image: radial-gradient(white, rgba(0, 0, 0, 0.6));
+    font-family: monospace;
+}
+
+img {
+    display: block;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    height: 5vh;
+    z-index: 1;
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 1rem;
+    width: 100%;
+    margin: 6vh auto 4vh auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.cake:hover {
+    background-color: rgba(165, 42, 42, 0.9);
+}
+
+.cake {
+    display: flex;
+    flex-direction: column;
+    background-color: brown;
+    height: 310px;
+    width: 310px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 2px 2px 3px;
+}
+
+.cake img {
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 1vh;
+    width: 250px;
+    height: 250px;
+}
+
+.cake p {
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.container2 {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 3vh auto 1vh auto;
+    background-color: azure;
+    height: 5vh;
+    width: 600px;
+    border-radius: 15px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    height: 3vh;
+    z-index: 1;
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+@media screen and  (min-width: 600px) {
+
+    .container {
+        flex-direction: row;
+        margin: 10% auto 2% auto;
+        gap: 1.5rem;
+    }
+
+    .cake {
+        height: 400px;
+        width: 400px;
+    }
+
+    .cake img {
+        height: 310px;
+        width: 310px;
+        border: 2px solid black;
+    }
+
+
+    .container2 {
+        display: flex;
+    }
+    
+}

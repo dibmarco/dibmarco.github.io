@@ -65,16 +65,27 @@ main {
     margin-bottom: 10px;
 }
 
-.profile-photo {
+.photo-container {
     height: 200px;
     width: 200px;
     border: 1.5px dashed black;
     border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.profile-photo {
+    height: 200px;
+    width: 200px;
     background-image: url(../profilelayout/imgs/profile-picture.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
-    margin: 0 auto;
+}
+
+.profile-photo:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
 }
 
 .about h2, .quote h2 {

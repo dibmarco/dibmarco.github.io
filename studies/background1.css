@@ -6,6 +6,7 @@
 
 body {
     font-family: monospace;
+    background-color: rgba(72, 9, 72, 0.725);
 }
 
 .container {
@@ -62,6 +63,7 @@ body {
     font-weight: 500;
     font-size: 1.5rem;
     border: 2px outset black;
+    text-align: justify;
 }
 
 @media only screen and (max-width: 600px) {

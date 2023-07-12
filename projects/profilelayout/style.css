@@ -44,6 +44,7 @@ main {
     height: 100vh;
     margin: 0 auto;
     padding: 1rem;
+    height: fit-content;
 }
 
 .main-container {
@@ -151,6 +152,7 @@ main {
     text-align: justify;
 }
 
+
 .main-content {
     display: flex;
     flex-direction: column;
@@ -168,7 +170,17 @@ main {
     border-bottom: 1px solid black;
     border-radius: 15px 15px 0 0;
     top: 0;
-    margin: -3px -4px 15px -4px;
+    margin: -10px -10px 15px -10x;
+}
+
+.title2 {
+    background-image: radial-gradient(white, antiquewhite);
+    padding: 5px;
+    border-bottom: 1px solid black;
+    border-radius: 15px 15px 0 0;
+    top: 0;
+    margin: -6px -9px 5px -9px;
+    overflow: hidden;
 }
 
 .main-content p {

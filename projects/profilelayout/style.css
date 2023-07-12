@@ -190,25 +190,28 @@ main {
 
 @media only screen and (max-width: 700px) {
 
+main {
+    width: fit-content;
+}
 
-    .main-container {
-        flex-direction: column;
-    }
+.main-container {
+    width: 330px;
+    display: block;
+}
 
-    .basic-info {
-        position: absolute;
-        margin: 0 0 0 70px;
-    }
+.basic-info {
+    position: static;
+    margin: 0 auto;
+}
 
-    .main-content {
-        margin: 0 0 30px 0;
-        width: 350px;
-        position: relative;
-        top: 610px;
-    }
+.about, .quote, .social-media {
+    width: 300px;
+}
 
-    .nav-bottom {
-        display: none;
-    }
+.main-content {
+    position: relative;
+    margin: 10px auto;
+    width: 320px;
+}
 
 }

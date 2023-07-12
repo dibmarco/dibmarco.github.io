@@ -151,6 +151,15 @@ main {
     margin-left: 225px;
 }
 
+.title {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), antiquewhite);
+    padding: 5px;
+    border-bottom: 1px solid black;
+    border-radius: 15px 15px 0 0;
+    top: 0;
+    margin: -3px -4px 15px -4px;
+}
+
 .main-content p {
     text-align: justify;
     margin: 2.5% auto;

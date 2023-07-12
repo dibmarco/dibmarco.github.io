@@ -81,8 +81,14 @@ main {
     margin-bottom: 3px;
 }
 
-.quote, .about, .social-media, .main-content {
+.about, .quote, .social-media, .main-content {
     border-style: groove;
+}
+
+.about:hover,
+.quote:hover,
+.social-media:hover {
+    background-color: rgb(248, 228, 202);
 }
 
 .quote {

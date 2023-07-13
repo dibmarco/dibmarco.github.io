@@ -15,6 +15,13 @@ body {
 a {
     text-decoration: none;
     color: whitesmoke;
+    opacity: 70%;
+}
+
+a:hover {
+    opacity: 100%;
+    transition: 0.7s all;
+    color: white;
 }
 
 /* .nowrap {

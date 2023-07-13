@@ -29,18 +29,34 @@ body {
     overflow: hidden;
 }
 
-.background1 {
+.page1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page1-footer {
+    position: absolute;
+    bottom: 1vh;
+    font-size: 3rem;
+}
+
+.background1, .background2 {
     width: 100%;
     height: 100%;
-    background-image: url(../basicHTML/imgs/background2.jpeg);
+    background-image: url(../basicHTML/imgs/coffee-and-cigarettes2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    /* transition: all 1s; */
 }
 
 .background2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+            url(../basicHTML/imgs/coffee-and-cigarettes2.jpg);
+}
+
+/* .background2 {
     width: 100%;
     height: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
@@ -49,28 +65,33 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: scroll;
-    /* transition: all 1s; */
-}
-
-/* .background1:hover {
-    transform: scale(1.1);
 } */
 
-.page1 h1 {
+/* .page1 h1 {
     display: flex;
     position: absolute;
-    top: 5vw;
-    left: 0;
-    color: whitesmoke;
-    background-color: black;
-    width: 30rem;
-    height: 5rem;
-    font-size: 3rem;
+    top: 20vw;
+    left: 28vw;
+    color: black;
+    background-color: whitesmoke;
+    width: fit-content;
+    height: 7rem;
+    font-size: 5rem;
     padding: 1rem;
-    border-radius: 0 15px 15px 0;
+    border-radius: 15px;
     align-items: center;
     justify-content: center;
-    box-shadow: 0.5px 0.5px 3px whitesmoke;
+    opacity: 80%;
+} */
+
+.tcj {
+    position: absolute;
+    background-color: black;
+    color: whitesmoke;
+    padding: 1rem;
+    font-size: 2rem;
+    border-radius: 15px;
+    opacity: 80%;
 }
 
 .aboutus {
@@ -96,7 +117,7 @@ body {
     background-size: cover;
 }
 
-.page2 h1 {
+/* .page2 h1 {
     display: flex;
     position: absolute;
     top: 5vw;
@@ -111,7 +132,7 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 0.5px 0.5px 3px whitesmoke;
-}
+} */
 
 .products-introduction {
     display: flex;
@@ -119,7 +140,7 @@ body {
     position: absolute;
     height: 18vh;
     width: 50%;
-    top: 14vw;
+    top: 7vw;
     left: 25vw;
     /* border: 1px solid white; */
     background-color: rgba(0, 0, 0, 0.6);
@@ -128,6 +149,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: justify;
+    font-weight: 700;
     padding: 1rem;
     border-radius: 15px;
 }
@@ -135,7 +157,7 @@ body {
 .featured-products {
     display: flex;
     position: absolute;
-    bottom: 4vh;
+    bottom: 13vh;
     width: 100%;
     height: 45vh;
     gap: 2rem;
@@ -191,11 +213,29 @@ body {
     transform: scale(1.2);
 }
 
+.coffee1 h3,
+.coffee2 h3,
+.coffee3 h3 {
+    position: absolute;
+    font-size: 1.5rem;
+    background-color: none;
+    top: 3%;
+    left: 0;
+    width: 100%;
+    padding: 0.3rem;
+    color: white;
+    opacity: 80%;
+}
+
 .coffee1 p, .coffee2 p, .coffee3 p {
     position: absolute;
     bottom: 5%;
     left: 0;
+    width: 100%;
+    padding: 0.3rem;
+    background-color: black;
     color: white;
+    opacity: 80%;
 }
 
 

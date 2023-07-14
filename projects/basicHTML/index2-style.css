@@ -136,10 +136,10 @@ a:hover {
 .featured-products {
     display: flex;
     position: absolute;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     bottom: 13vh;
     width: 100%;
-    height: 45vh;
+    height: fit-content;
     padding: 0.5rem;
     gap: 2rem;
     align-items: center;
@@ -223,4 +223,50 @@ footer {
     position: relative;
     width: 100%;
     bottom: 0;
+}
+
+@media only screen and (max-width: 740px) {
+
+    .tcj {
+        font-size: 1rem;
+    }
+
+    .page2 {
+        max-height: 120vh;
+    }
+
+    .page2 p:nth-child(1) {
+        font-size: 8vw;
+    }
+
+    .page3-footer {
+        font-size: 0.8rem;
+    }
+
+    .products-introduction {
+        width: fit-content;
+        height: fit-content;
+        top: 2vh;
+        left: 1.8vw;
+    }
+
+    .coffee1,
+    .coffee2,
+    .coffee3 {
+        max-width: 270px;
+        max-height: 190px;
+    }
+
+    .featured-products {
+        bottom: 3vh;
+    }
+
+    .social-media {
+        width: fit-content;
+    }
+
+    .social-background {
+        width: 50vw;
+    }
+
 }

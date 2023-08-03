@@ -36,7 +36,7 @@ nav {
 nav h1 {
     position: absolute;
     font-family: 'Tektur', cursive;
-    font-size: 4rem;
+    font-size: clamp(42px, 4rem, 64px);
     margin-top: -0.9rem;
     margin-left: 1rem;
 }
@@ -50,10 +50,9 @@ nav h1 {
 nav ul {
     display: flex;
     list-style: none;
-    font-size: 2rem;
+    font-size: clamp(16px, 2rem, 38px);
     column-gap: 3rem;
     cursor: pointer;
-    font-size: 2rem;
 }
 
 nav ul li {
@@ -142,6 +141,16 @@ main {
     width: 100%;
     height: 100vh;
     align-items: center;
+    font-size: clamp(1rem, 1.5rem, 2rem);
+}
+
+.section2 article {
+    width: 100vw;
+    height: 85vh;
+    border: 1.8px inset red;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .section2-content1 {
@@ -154,19 +163,10 @@ main {
     align-items: center;
 }
 
-.section2 article {
-    width: 35%;
-    height: 98%;
-    border: 1px solid red;
-    border-radius: 5px;
-    overflow: hidden;
-    opacity: 100%;
-    transition: all 0.3s ease;
-}
-
 .section2-content1:hover article:not(:hover) {
     opacity: 30%;
     transform: scale(0.95,0.95);
+    border: 0.2px black;
 }
 
 .free,
@@ -175,10 +175,13 @@ main {
     position: relative;
 }
 
-.free-header {
+.free-header, .basic-header, .premium-header {
     position: absolute;
     width: 100%;
     height: 15rem;
+}
+
+.free-header {
     background: url(../alphaproject/imgs/free.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -186,9 +189,6 @@ main {
 }
 
 .basic-header {
-    position: absolute;
-    width: 100%;
-    height: 15rem;
     background: url(../alphaproject/imgs/basic.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -196,13 +196,45 @@ main {
 }
 
 .premium-header {
-    position: absolute;
-    width: 100%;
-    height: 15rem;
     background: url(../alphaproject/imgs/premium.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.free-content, .basic-content, .premium-content {
+    position: absolute;
+    width: 100%;
+    height: 85%;
+    top: 15rem;
+    background-color: rgba(128, 128, 128, 0.1);
+    padding: 1rem;
+}
+
+.free-content p,
+.basic-content p,
+.premium-content p {
+    padding: 0.5rem 1rem 0 1rem;
+}
+.free-content ul,
+.basic-content ul,
+.premium-content ul {
+    margin: 1.5rem 0 0 3rem;
+    line-height: 2rem;
+}
+
+button {
+    position: absolute;
+    right: 10%;
+    bottom: 3%;
+    border: 1px solid red;
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.1);
+    padding: 0.5rem;
+    color: red;
+    width: 15rem;
+    height: 3rem;
+    font-size: 1.5rem;
 }
 
 footer {

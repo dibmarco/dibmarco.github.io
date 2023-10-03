@@ -32,7 +32,7 @@ header {
     z-index: 1;
     width: 60%;
     background-color: #181818;
-    padding-top: 3vh;
+    padding-top: 10vh;
 }
 
 header p {
@@ -76,7 +76,7 @@ main {
     flex-direction: column;
     justify-content: center;
     min-height: 70vh;
-    margin: 15vh 0 0 0;
+    margin: 18vh 0 0 0;
 }
 
 .photo-container {

@@ -43,12 +43,19 @@ header ul li {
     cursor: pointer;
 }
 
+header ul li {
+    border-right: 1px solid rgba(12, 230, 70, 0.1);
+    padding-right: 15px;
+}
+
 header ul li:hover {
     opacity: 75%;
 }
 
 header ul li:last-of-type {
     margin-right: 0;
+    border-right: none;
+    padding-right: 0;
 }
 
 nav {

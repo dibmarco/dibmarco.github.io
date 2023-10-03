@@ -18,15 +18,19 @@ body {
     background-color: #181818;
     color: white;
     width: 60%;
-    margin: 5vh auto;
+    margin: 0 auto;
     font-family: 'Nunito Sans', sans-serif;
 }
 
 header {
     display: flex;
-    height: 5vh;
+    height: 10vh;
     align-items: center;
     justify-content: space-between;
+    position: fixe;
+    top: 0;
+    z-index: 1;
+    margin-top: 3vh;
 }
 
 header p {

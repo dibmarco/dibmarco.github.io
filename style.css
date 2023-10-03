@@ -43,6 +43,10 @@ header ul li {
     cursor: pointer;
 }
 
+header ul li:hover {
+    opacity: 75%;
+}
+
 header ul li:last-of-type {
     margin-right: 0;
 }

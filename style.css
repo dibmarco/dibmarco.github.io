@@ -152,14 +152,14 @@ aside ul li {
     margin-top: 1rem;
 }
 
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 640px) {
 
     body {
         width: 85%;
     }
 
     header {
-        margin: 0 15vw;
+        margin: 0 20vw;
         flex-direction: column;
         position: static;
         width: 85%;
@@ -167,13 +167,12 @@ aside ul li {
     }
 
     header p {
-        padding-bottom: 0.5rem;
+        padding: 0 5vw 1.5vw 0;
     }
 
     header ul {
-        justify-content: center;
         margin: 0;
-        padding: 0 1rem;
+        padding-left: 1rem;
     }
 
     main {

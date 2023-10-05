@@ -23,19 +23,6 @@ body {
     height: 450px;
     width: 450px;
     position: relative;
-    animation: transitionin 2s;
-}
-
-@keyframes transitionin {
-    
-    from {
-        opacity: 0;
-    }
-    
-    to {
-        opacity: 07;
-        }
-    
 }
 
 .square1,

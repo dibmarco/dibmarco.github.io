@@ -45,3 +45,9 @@ document.querySelector(".convert").addEventListener("click", function () {
     document.querySelector(".fahrenheit").value = Math.trunc(fahrenheit);
   }
 });
+
+document.querySelector(".clear").addEventListener("click", function () {
+  document.querySelector(".celsius").value = "";
+  document.querySelector(".fahrenheit").value = "";
+  document.querySelector(".kelvin").value = "";
+});

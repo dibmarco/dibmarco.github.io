@@ -27,21 +27,21 @@ document.querySelector(".convert").addEventListener("click", function () {
   // console.log(typeof celsius, typeof fahrenheit, typeof kelvin)
 
   if (celsius && !fahrenheit && !kelvin) {
-    let fahrenheit = celsius * (9 / 5) + 32;
+    fahrenheit = celsius * (9 / 5) + 32;
     document.querySelector(".fahrenheit").value = Math.trunc(fahrenheit);
-    let kelvin = Number(celsius) + 273;
+    kelvin = Number(celsius) + 273;
     document.querySelector(".kelvin").value = Math.trunc(kelvin);
 
   } else if (fahrenheit && !celsius && !kelvin) {
-    let celsius = ((fahrenheit - 32) * 5) / 9;
+    celsius = ((fahrenheit - 32) * 5) / 9;
     document.querySelector(".celsius").value = Math.trunc(celsius);
-    let kelvin = ((fahrenheit - 32) * 5) / 9 + 273.15;
+    kelvin = ((fahrenheit - 32) * 5) / 9 + 273.15;
     document.querySelector(".kelvin").value = Math.trunc(kelvin);
 
   } else if (kelvin && !celsius && !fahrenheit) {
-    let celsius = kelvin - 273.15;
+    celsius = kelvin - 273.15;
     document.querySelector(".celsius").value = Math.trunc(celsius);
-    let fahrenheit = ((kelvin - 273.15) * 9) / 5 + 32;
+    fahrenheit = ((kelvin - 273.15) * 9) / 5 + 32;
     document.querySelector(".fahrenheit").value = Math.trunc(fahrenheit);
   }
 });

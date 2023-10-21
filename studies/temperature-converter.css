@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Orbitron', sans-serif;
+    height: 80vh;
+    width: 100vw;
+    background-image: url(../JavaScript/sky.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+main {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    gap: 25px;
+}
+
+main h1 {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+
+div {
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.equal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+}
+
+.temp-celsius {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 180px;
+    height: 80px;
+}
+
+input {
+    width: 150px;
+    height: 50px;
+    font-size: 42px;
+    text-align: center;
+    border: none;
+    font-family: 'Orbitron', sans-serif;
+}
+
+input::placeholder {
+    text-align: center;
+}
+
+.temp-celsius, .temp-fahrenheit, .temp-kelvin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 80px;
+}
+
+.temp-celsius, .temp-fahrenheit, .temp-kelvin {
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 2rem;
+    background-color: white;
+}
+
+.equal {
+    font-size: 2rem;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 35px;
+}
+
+button {
+    margin-right: 10px;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 255, 0.3);
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+}
+
+button:active {
+    transform: scale(0.9);
+}

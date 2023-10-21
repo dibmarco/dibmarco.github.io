@@ -13,7 +13,7 @@ body {
     font-family: 'Orbitron', sans-serif;
     height: 80vh;
     width: 100vw;
-    background-image: url(../JavaScript/sky.jpg);
+    background-image: url(sky.jpg);
     background-position: center;
     background-size: cover;
 }

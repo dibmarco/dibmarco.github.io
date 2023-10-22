@@ -26,19 +26,19 @@ document.querySelector(".convert").addEventListener("click", function () {
 
   // console.log(typeof celsius, typeof fahrenheit, typeof kelvin)
 
-  if (celsius && !fahrenheit && !kelvin) {
+  if (celsius) {
     fahrenheit = celsius * (9 / 5) + 32;
     document.querySelector(".fahrenheit").value = Math.trunc(fahrenheit);
     kelvin = Number(celsius) + 273;
     document.querySelector(".kelvin").value = Math.trunc(kelvin);
 
-  } else if (fahrenheit && !celsius && !kelvin) {
+  } else if (fahrenheit) {
     celsius = ((fahrenheit - 32) * 5) / 9;
     document.querySelector(".celsius").value = Math.trunc(celsius);
     kelvin = ((fahrenheit - 32) * 5) / 9 + 273.15;
     document.querySelector(".kelvin").value = Math.trunc(kelvin);
 
-  } else if (kelvin && !celsius && !fahrenheit) {
+  } else if (kelvin) {
     celsius = kelvin - 273.15;
     document.querySelector(".celsius").value = Math.trunc(celsius);
     fahrenheit = ((kelvin - 273.15) * 9) / 5 + 32;

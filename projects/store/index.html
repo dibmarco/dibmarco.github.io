@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>T-Shirt Store</title>
+</head>
+<body>
+
+    <main>
+        <div class="container">
+            <div class="tshirt-photo">
+                <img src="img/tshirt_black.jpg" alt="" width="300px" class="black-white">
+            </div>
+
+            <div class="tshirt-data">
+                <h1>Black Flag T-Shirt</h1>
+                <h2>$30</h2>
+
+                <label for="color">Color:</label>
+                <select id="color" class="color">
+                    <option value="black">Black</option>
+                    <option value="white">White</option>
+                </select>
+
+                <br>
+                <label for="size">Size:</label>
+                <select id="size" class="size">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+
+                <br>
+                <label for="quantity">Quantity:</label>
+                <input type="number" min="1" value="1" class="tshirt-quantity" id="quantity">
+
+                <br>
+                <button class="buy">Buy Now!</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="javascript.js"></script>
+    
+</body>
+</html>

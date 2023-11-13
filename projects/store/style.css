@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 600px;
+    height: 80vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.tshirt-photo img {
+    width: 300px;
+    height: 410px;
+}
+
+.tshirt-data {
+    /* border: 1px solid black; */
+    width: 300px;
+    padding: 1rem;
+}
+
+.tshirt-data h1 {
+    margin-bottom: 10px;
+}
+
+.tshirt-data h2 {
+    margin-bottom: 80px;
+    background-color: black;
+    color: white;
+    width: 50px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.tshirt-data label {
+    font-size: 20px;
+}
+
+.tshirt-data select, option, input {
+    font-size: 16px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.tshirt-quantity {
+    width: 50px;
+}
+
+button {
+    background-color: black;
+    color: white;
+    width: 200px;
+    height: 30px;
+    margin-top: 60px;
+}

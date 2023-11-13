@@ -2,8 +2,10 @@
 
 const shirtPhoto = document.querySelector(".black-white");
 const buyBtn = document.querySelector(".buy");
-let color = "black";
-let size = "small";
+const reviewOrder = document.querySelector(".review-order");
+const placeOrder = document.querySelector(".place-order");
+let color = "Black";
+let size = "Small";
 let quantity = 1;
 const price = 30;
 
@@ -31,11 +33,31 @@ function buy() {
     priceOrder: quantity * price,
   };
 
+  document.querySelector(".review-color").textContent = order.colorOrder;
+  document.querySelector(".review-size").textContent = order.sizeOrder;
+  document.querySelector(".review-quantity").textContent = order.quantityOrder;
+  document.querySelector(".review-price").textContent = `US$ ${order.priceOrder}`;
+
+  reviewOrder.style.transform = "translateX(0%)";
+
   // console.log(color, size, quantity);
-  console.log(order);
-}
+
+  placeOrder.addEventListener("click", function() {
+    console.log(order);
+  });
+
+};
 
 buyBtn.addEventListener("click", buy);
+
+function cancel() {
+  reviewOrder.style.transform = "translateX(100%)";
+};
+
+document.querySelector(".color").addEventListener("click", cancel);
+document.querySelector(".size").addEventListener("click", cancel);
+document.querySelector(".tshirt-quantity").addEventListener("click", cancel);
+document.querySelector(".cancel").addEventListener("click", cancel);
 
 // #2
 // const shirtPhoto = document.querySelector(".black-white");

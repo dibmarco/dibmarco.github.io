@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <main>
+    <main class="main">
         <div class="container">
             <div class="tshirt-photo">
                 <img src="img/tshirt_black.jpg" alt="" width="300px" class="black-white">
@@ -20,16 +20,16 @@
 
                 <label for="color">Color:</label>
                 <select id="color" class="color">
-                    <option value="black">Black</option>
-                    <option value="white">White</option>
+                    <option value="Black">Black</option>
+                    <option value="White">White</option>
                 </select>
 
                 <br>
                 <label for="size">Size:</label>
                 <select id="size" class="size">
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
                 </select>
 
                 <br>
@@ -40,7 +40,21 @@
                 <button class="buy">Buy Now!</button>
             </div>
         </div>
+        
+        <aside class="review-order">
+            <p class="cancel">-X-</p>
+            <h1>Review your order:</h1>
+            <p><strong>Black Flag T-Shirt</strong></p>
+            <br>
+            <p>Color: <span class="review-color"></span></p>
+            <p>Size: <span class="review-size"></span></p>
+            <p>Quantity: <span class="review-quantity"></span></p>
+            <p class="grand-total"><strong>Grand Total: <span class="review-price"></span></strong></p>
+            <button class="place-order">Place Order</button>
+        </aside>
+        
     </main>
+
 
     <script src="javascript.js"></script>
     

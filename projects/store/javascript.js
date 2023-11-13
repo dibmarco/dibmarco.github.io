@@ -4,8 +4,8 @@ const shirtPhoto = document.querySelector(".black-white");
 const buyBtn = document.querySelector(".buy");
 const reviewOrder = document.querySelector(".review-order");
 const placeOrder = document.querySelector(".place-order");
-let color = "Black";
-let size = "Small";
+let color = "black";
+let size = "small";
 let quantity = 1;
 const price = 30;
 

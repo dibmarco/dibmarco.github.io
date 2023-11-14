@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="tshirt.css">
+    <title>Black Flag T-Shirt</title>
+</head>
+<body>
+
+    <header>
+        <h1>Rock T-Shirts</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="tshirt-photo">
+                <img src="img/blackflag_black.jpg" alt="" width="300px" class="black-white">
+            </div>
+
+            <div class="tshirt-data">
+                <h1>Black Flag T-Shirt</h1>
+                <h2>$30</h2>
+
+                <label for="color">Color:</label>
+                <select id="color" class="color">
+                    <option value="black">Black</option>
+                    <option value="white">White</option>
+                </select>
+
+                <br>
+                <label for="size">Size:</label>
+                <select id="size" class="size">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+
+                <br>
+                <label for="quantity">Quantity:</label>
+                <input type="number" min="1" value="1" class="tshirt-quantity" id="quantity">
+
+                <br>
+                <button class="buy">Add to cart</button>
+            </div>
+        </div>
+        
+    </main>
+
+    <aside class="review-order">
+        <p class="cancel">-X-</p>
+        <h1>Review your order:</h1>
+        <p><span class="bandname"><strong></strong></span></p>
+        <br>
+        <p>Color: <span class="review-color"></span></p>
+        <p>Size: <span class="review-size"></span></p>
+        <p>Quantity: <span class="review-quantity"></span></p>
+        <p class="grand-total"><strong>Grand Total: <span class="review-price"></span></strong></p>
+        <button class="place-order">Place Order</button>
+    </aside>
+
+    <div class="overlay hidden">
+        <div class="order-placed hidden">
+            <span class="order-placed-close">-X-</span>
+            <p>Your order has been placed.🤘</p>
+        </div>
+    </div>
+    
+    <footer>
+            <div class="social-icons">
+                <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com/" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
+            </div>
+    </footer>
+
+    <script src="javascript.js"></script>
+    
+</body>
+</html>

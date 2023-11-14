@@ -1,17 +1,31 @@
 "use strict";
 
+const header = document.querySelector("header");
+const main = document.querySelector("main");
+const footer = document.querySelector("footer");
 const shirtPhoto = document.querySelector(".black-white");
 const buyBtn = document.querySelector(".buy");
 const reviewOrder = document.querySelector(".review-order");
 const placeOrder = document.querySelector(".place-order");
+const overlay = document.querySelector(".overlay");
+const orderPlaced = document.querySelector(".order-placed");
 let color = "black";
 let size = "small";
 let quantity = 1;
-const price = 30;
+let band;
+let price;
+
+if (document.title.toLowerCase() === "black flag t-shirt") {
+  price = 30;
+  band = "blackflag";
+} else {
+  price = 35;
+  band = "metallica";
+}
 
 document.getElementById("color").addEventListener("change", function () {
   color = this.value;
-  shirtPhoto.src = `img/tshirt_${color}.jpg`;
+  shirtPhoto.src = `img/${band}_${color}.jpg`;
 });
 
 document.getElementById("size").addEventListener("change", function () {
@@ -24,12 +38,16 @@ document.getElementById("quantity").addEventListener("change", function () {
 
 function buy() {
   const order = {
+    bandOrder: band,
     colorOrder: color,
     sizeOrder: size,
     quantityOrder: quantity,
     priceOrder: quantity * price,
   };
 
+  document.querySelector(
+    ".bandname"
+  ).textContent = `${order.bandOrder} t-shirt`;
   document.querySelector(".review-color").textContent = order.colorOrder;
   document.querySelector(".review-size").textContent = order.sizeOrder;
   document.querySelector(".review-quantity").textContent = order.quantityOrder;
@@ -46,134 +64,125 @@ function cancel() {
   reviewOrder.style.transform = "translateX(100%)";
 }
 
-document.querySelector(".color").addEventListener("click", cancel);
-document.querySelector(".size").addEventListener("click", cancel);
-document.querySelector(".tshirt-quantity").addEventListener("click", cancel);
-document.querySelector(".cancel").addEventListener("click", cancel);
+function openClose(event) {
+  overlay.classList.toggle("hidden");
+  orderPlaced.classList.toggle("hidden");
+  header.classList.toggle("blur");
+  main.classList.toggle("blur");
+  footer.classList.toggle("blur");
+  reviewOrder.classList.toggle("blur");
 
-placeOrder.addEventListener("click", function () {
+  if (event.target === placeOrder) {
+    logToConsole();
+  }
+}
+
+function logToConsole() {
   console.log({
+    bandOrder: band,
     colorOrder: color,
     sizeOrder: size,
     quantityOrder: quantity,
     priceOrder: quantity * price,
   });
-});
+}
 
-// #3
+document.querySelector(".color").addEventListener("click", cancel);
+document.querySelector(".size").addEventListener("click", cancel);
+document.querySelector(".tshirt-quantity").addEventListener("click", cancel);
+document.querySelector(".cancel").addEventListener("click", cancel);
+
+placeOrder.addEventListener("click", openClose);
+overlay.addEventListener("click", openClose);
+
+// "use strict";
+
+// const header = document.querySelector("header");
+// const main = document.querySelector("main");
+// const footer = document.querySelector("footer");
 // const shirtPhoto = document.querySelector(".black-white");
 // const buyBtn = document.querySelector(".buy");
 // const reviewOrder = document.querySelector(".review-order");
 // const placeOrder = document.querySelector(".place-order");
+// const overlay = document.querySelector(".overlay");
+// const orderPlaced = document.querySelector(".order-placed");
 // let color = "black";
 // let size = "small";
 // let quantity = 1;
-// const price = 30;
+// let band;
+// let price;
+
+// if (document.title.toLowerCase() === "black flag t-shirt") {
+//   price = 30;
+//   band = "blackflag";
+// } else {
+//   price = 35;
+//   band = "metallica";
+// };
 
 // document.getElementById("color").addEventListener("change", function () {
 //   color = this.value;
-//   shirtPhoto.src = `img/tshirt_${color}.jpg`;
-//   // console.log(color);
+//   shirtPhoto.src = `img/${band}_${color}.jpg`;
 // });
 
 // document.getElementById("size").addEventListener("change", function () {
 //   size = this.value;
-//   // console.log(size);
 // });
 
 // document.getElementById("quantity").addEventListener("change", function () {
 //   quantity = this.value;
-//   // console.log(quantity);
 // });
 
 // function buy() {
 //   const order = {
+//     bandOrder: band,
 //     colorOrder: color,
 //     sizeOrder: size,
 //     quantityOrder: quantity,
 //     priceOrder: quantity * price,
 //   };
 
+//   document.querySelector(".bandname").textContent = `${order.bandOrder} t-shirt`;
 //   document.querySelector(".review-color").textContent = order.colorOrder;
 //   document.querySelector(".review-size").textContent = order.sizeOrder;
 //   document.querySelector(".review-quantity").textContent = order.quantityOrder;
-//   document.querySelector(".review-price").textContent = `US$ ${order.priceOrder}`;
+//   document.querySelector(
+//     ".review-price"
+//   ).textContent = `US$ ${order.priceOrder}`;
 
 //   reviewOrder.style.transform = "translateX(0%)";
-
-//   // console.log(color, size, quantity);
-
-//   placeOrder.addEventListener("click", function() {
-//     console.log(order);
-//   });
-
-// };
+// }
 
 // buyBtn.addEventListener("click", buy);
 
 // function cancel() {
 //   reviewOrder.style.transform = "translateX(100%)";
-// };
+// }
+
+// function openClose() {
+//   overlay.classList.toggle("hidden");
+//   orderPlaced.classList.toggle("hidden");
+//   header.classList.toggle("blur");
+//   main.classList.toggle("blur");
+//   footer.classList.toggle("blur");
+//   reviewOrder.classList.toggle("blur");
+
+// }
+
+// function logToConsole() {
+//   console.log({
+//     bandOrder: band,
+//     colorOrder: color,
+//     sizeOrder: size,
+//     quantityOrder: quantity,
+//     priceOrder: quantity * price,
+//   });
+// }
 
 // document.querySelector(".color").addEventListener("click", cancel);
 // document.querySelector(".size").addEventListener("click", cancel);
 // document.querySelector(".tshirt-quantity").addEventListener("click", cancel);
 // document.querySelector(".cancel").addEventListener("click", cancel);
 
-// #2
-// const shirtPhoto = document.querySelector(".black-white");
-// const buyBtn = document.querySelector(".buy");
-// let color;
-
-// document.getElementById("color").addEventListener("change", function () {
-//   color = this.value;
-//   shirtPhoto.src = `img/tshirt_${color}.jpg`;
-// //   console.log(color);
-// });
-
-// function buy() {
-//   const size = document.getElementById("size").value;
-//   const quantity = document.getElementById("quantity").value;
-//   let price = 30;
-
-//   const order = {
-//     colorOrder: color,
-//     sizeOrder: size,
-//     quantityOrder: quantity,
-//     priceOrder: quantity * price,
-//   };
-
-//   console.log(order);
-// }
-
-// buyBtn.addEventListener("click", buy);
-
-// #1
-// const shirtPhoto = document.querySelector(".black-white");
-// const buyBtn = document.querySelector(".buy");
-// const color = document
-//   .getElementById("color")
-//   .addEventListener("change", function () {
-//     const color = this.value;
-
-//     shirtPhoto.src = `img/tshirt_${color}.jpg`;
-
-//     console.log(`You selected: ${color}`);
-//   });
-
-// function buy() {
-//   const size = document.getElementById("size").value;
-//   const quantity = document.getElementById("quantity").value;
-//   let price = 30;
-
-//   const order = {
-//     sizerOrder: size,
-//     quantityOrder: quantity,
-//     priceOrder: quantity * price,
-//     colorOrder: color,
-//   };
-
-//   console.log(order);
-// }
-
-// buyBtn.addEventListener("click", buy);
+// placeOrder.addEventListener("click", openClose);
+// overlay.addEventListener("click", openClose);

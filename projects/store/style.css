@@ -1,121 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
 body {
-    font-family: monospace;
+    font-family: 'Inter', sans-serif;
+}
+
+header, main, footer, nav, .container {
+    margin: 0 auto;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    height: 20vh;
+}
+
+header h1 {
+    font-size: 42px;
+    padding-bottom: 1rem;
+}
+
+nav {
+    font-size: 16px;
+    align-items: center;
+}
+
+nav {
+    height: 5vh;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0.5rem 3rem;
 }
 
 main {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 60vh;
+    margin-bottom: 5vh;
+}
+
+.container, .about {
     margin: 0 auto;
-    width: 100%;
-    height: 100vh;
+    flex-direction: row;
+    gap: 10rem;
+    animation: transitionIn 0.75s;
+}
+
+ @keyframes transitionIn {
+        
+        from {
+            opacity: 0;
+            /* transform: rotateX(-10deg); */
+            /* transform: translateY(-5px); */
+        }
+
+        to {
+            opacity: 1;
+            /* transform: rotateX(0deg); */
+            /* transform: translateY(0); */
+        }
+
+    }
+
+.blackflag, .metallica {
+    height: 410px;
+    width: 300px;
+    background-color: black;
+    border: 2px solid white;
+    transition: 0.5s all ease;
+    position: relative;
     overflow: hidden;
+}
+
+.blackflag {
+    background-image: url(img/blackflag_black.jpg);
+}
+
+.blackflag:hover {
+    background-image: url(img/blackflag_white.jpg);
     
 }
 
-.container {
+.metallica {
+    background-image: url(img/metallica_black.jpg);
+}
+
+.metallica:hover {
+    background-image: url(img/metallica_charcoal.jpg);
+}
+
+.blackflag:hover, .metallica:hover {
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.blackflag p, .metallica p {
+    position: absolute;
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    width: 650px;
+    align-items: center;
+    justify-content: center;
+    right: -100px;
+    width: 80px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 16px;
+    border-radius: 20px;
 }
 
-.tshirt-photo img {
-    width: 300px;
-    height: 410px;
+.blackflag:hover p, .metallica:hover p {
+    right: 10px;
+    bottom: 10px;
 }
 
-.tshirt-data {
-    /* border: 1px solid black; */
-    width: 300px;
+.about {
+    line-height: 2rem;
+    text-align: justify;
+}
+
+.about p {
+    padding: 0.5rem;
+    line-height: 1.5rem;
+}
+
+footer {
+    display: flex;
+    height: 15vh;
+    font-size: 25px;
+    border-top: 1px solid black;
+}
+
+footer i {
     padding: 1rem;
 }
 
-.tshirt-data h1 {
-    margin-bottom: 10px;
+footer i:hover {
+    opacity: 80%;
 }
 
-.tshirt-data h2 {
-    margin-bottom: 80px;
-    background-color: black;
-    color: white;
-    width: 50px;
-    text-align: center;
-    border-radius: 5px;
-}
-
-.tshirt-data label {
-    font-size: 20px;
-}
-
-.tshirt-data select, option, input {
-    font-size: 16px;
-    margin: 10px 0;
-    text-align: center;
-}
-
-.tshirt-quantity {
-    width: 50px;
-}
-
-.buy, .place-order {
-    background-color: black;
-    color: white;
-    width: 200px;
-    height: 30px;
-    margin-top: 60px;
-}
-
-
-aside {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: whitesmoke;
-    height: 100vh;
-    width: 300px;
-    padding: 2.5rem;
-    transform: translateX(100%);
-    transition: 1s all ease;
-}
-
-aside h1 {
-    font-size: 22px;
-    text-decoration: underline;
-    margin-bottom: 15px;
-}
-
-aside p {
-    font-size: 16px;
-    margin: 3px 0;
-}
-
-aside span, .grand-total {
-    text-transform: uppercase;
-}
-
-.grand-total {
-    margin-top: 15px;
-}
-
-.place-order {
-    margin-top: 20px;
-}
-
-.cancel {
-    text-align: center;
-    font-size: 20px;
-    margin: 0 0 14px 180px;
-    cursor: pointer;
-    width: 50px;
+footer a:hover {
+    text-decoration: none;
 }

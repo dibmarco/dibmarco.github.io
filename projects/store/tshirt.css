@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+}
+
+header, main, footer, nav, .container {
+    margin: 0 auto;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    height: 20vh;
+}
+
+header h1 {
+    font-size: 42px;
+    padding-bottom: 1rem;
+}
+
+nav {
+    font-size: 16px;
+    align-items: center;
+}
+
+nav {
+    height: 5vh;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0.5rem 3rem;
+}
+
+main {
+    height: 60vh;
+    margin-bottom: 5vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 650px;
+    animation: transitionIn 0.75s;
+}
+
+@keyframes transitionIn {
+        
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+
+    }
+
+.tshirt-photo img {
+    width: 300px;
+    height: 410px;
+    border: 2px solid white;
+}
+
+.tshirt-photo img:hover {
+    border: 2px solid black;
+}
+
+.tshirt-data {
+    width: 300px;
+    padding: 1rem;
+}
+
+.tshirt-data h1 {
+    margin-bottom: 10px;
+}
+
+.tshirt-data h2 {
+    margin-bottom: 80px;
+    background-color: black;
+    color: white;
+    width: 60px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.tshirt-data label {
+    font-size: 20px;
+}
+
+.tshirt-data select, option, input {
+    font-size: 16px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.tshirt-quantity {
+    width: 50px;
+}
+
+.buy, .place-order {
+    background-color: black;
+    color: white;
+    width: 200px;
+    height: 30px;
+    margin-top: 60px;
+    cursor: pointer;
+}
+
+
+aside {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: whitesmoke;
+    height: 100vh;
+    width: 300px;
+    padding: 2.5rem;
+    transform: translateX(100%);
+    transition: 1s transform ease;
+}
+
+aside h1 {
+    font-size: 22px;
+    text-decoration: underline;
+    margin-bottom: 15px;
+}
+
+aside p {
+    font-size: 16px;
+    margin: 3px 0;
+}
+
+aside span, .grand-total {
+    text-transform: uppercase;
+}
+
+.grand-total {
+    margin-top: 15px;
+}
+
+.place-order {
+    margin-top: 20px;
+}
+
+.cancel {
+    text-align: center;
+    font-size: 20px;
+    margin: 0 0 14px 180px;
+    cursor: pointer;
+    width: 50px;
+}
+
+.overlay {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+    animation: transitionIn 0.2s;
+}
+
+.order-placed {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 120px;
+    width: 320px;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    font-size: 16px;
+    z-index: 2;
+    animation: transitionIn2 0.2s;
+}
+
+@keyframes transitionIn2 {
+        
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    }
+
+.order-placed span {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    height: 20px;
+    width: 30px;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    height: 15vh;
+    font-size: 25px;
+    border-top: 1px solid black;
+}
+
+footer i {
+    padding: 1rem;
+}
+
+footer i:hover {
+    opacity: 80%;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.blur {
+    filter: blur(2px);
+}

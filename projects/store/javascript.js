@@ -21,7 +21,7 @@ if (document.title.toLowerCase() === "black flag t-shirt") {
 } else {
   price = 35;
   band = "metallica";
-}
+};
 
 document.getElementById("color").addEventListener("change", function () {
   color = this.value;
@@ -36,7 +36,7 @@ document.getElementById("quantity").addEventListener("change", function () {
   quantity = this.value;
 });
 
-function buy() {
+function addToCart() {
   const order = {
     bandOrder: band,
     colorOrder: color,
@@ -45,24 +45,18 @@ function buy() {
     priceOrder: quantity * price,
   };
 
-  document.querySelector(
-    ".bandname"
-  ).textContent = `${order.bandOrder} t-shirt`;
+  document.querySelector(".bandname").textContent = `${order.bandOrder} t-shirt`;
   document.querySelector(".review-color").textContent = order.colorOrder;
   document.querySelector(".review-size").textContent = order.sizeOrder;
   document.querySelector(".review-quantity").textContent = order.quantityOrder;
-  document.querySelector(
-    ".review-price"
-  ).textContent = `US$ ${order.priceOrder}`;
+  document.querySelector(".review-price").textContent = `US$ ${order.priceOrder}`;
 
   reviewOrder.style.transform = "translateX(0%)";
-}
-
-buyBtn.addEventListener("click", buy);
+};
 
 function cancel() {
   reviewOrder.style.transform = "translateX(100%)";
-}
+};
 
 function openClose(event) {
   overlay.classList.toggle("hidden");
@@ -72,10 +66,12 @@ function openClose(event) {
   footer.classList.toggle("blur");
   reviewOrder.classList.toggle("blur");
 
-  if (event.target === placeOrder) {
-    logToConsole();
+  if (event.target === placeOrder && !overlay.classList.contains("hidden")) {
+    reviewOrder.style.transform = "translateX(0%)";
+  } else {
+    reviewOrder.style.transform = "translateX(100%)";
   }
-}
+};
 
 function logToConsole() {
   console.log({
@@ -86,6 +82,8 @@ function logToConsole() {
     priceOrder: quantity * price,
   });
 }
+
+buyBtn.addEventListener("click", addToCart);
 
 document.querySelector(".color").addEventListener("click", cancel);
 document.querySelector(".size").addEventListener("click", cancel);

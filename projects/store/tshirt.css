@@ -17,6 +17,7 @@ a:hover {
 }
 
 body {
+    position: relative;
     font-family: 'Inter', sans-serif;
     overflow: hidden;
 }
@@ -61,8 +62,8 @@ nav ul li {
 }
 
 main {
-    height: 60vh;
-    margin-bottom: 5vh;
+    height: 55vh;
+    margin: 2vh auto 5vh auto;
 }
 
 .container {
@@ -135,7 +136,6 @@ main {
     margin-top: 60px;
     cursor: pointer;
 }
-
 
 aside {
     position: absolute;

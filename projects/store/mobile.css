@@ -21,15 +21,19 @@ body {
 }
 
 main {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    overflow: hidden;
 }
 
 header h1 {
+    font-size: 2.5rem;
     padding: 1rem;
+    text-shadow: 1px 1px rgba(150, 150, 150, 0.5);
 }
 
 nav {
@@ -44,6 +48,7 @@ nav ul {
 
 nav li {
     list-style: none;
+    padding: 3px;
 }
 
 .blackflag, .metallica {
@@ -57,19 +62,63 @@ nav li {
     background-color: black;
     margin: 1rem 0;
     overflow: hidden;
+    border: 2px solid white;
+    border-radius: 3px;
 }
 
-.blackflag img, .metallica img {
+.blackflag:hover, .metallica:hover {
+    border: 2px solid black;
+}
+
+.blackflag {
+    background-image: url(img/blackflag_black.jpg);
+}
+
+.metallica {
+    background-image: url(img/metallica_black.jpg);
+}
+
+.colors {
     position: absolute;
+    /* border: 1px solid black; */
+    width: 52px;
+    height: 112px;
+    top: 11px;
+    right: 11px;
+}
+
+.bf-black, .mt-black {
+    position: inherit;
+    border: 1px solid white;
+    width: 51px;
+    height: 51px;
     top: 0;
-    left: 0;
+    right: 0;
+    background-color: black;
+    border-radius: 5px;
 }
 
-.blackflag p, .metallica p {
-    position: absolute;
+.bf-white, .mt-charcoal {
+    position: inherit;
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
     bottom: 0;
-    left: 0;
-    z-index: 1;
+    right: 0;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.mt-charcoal {
+    background-color: darkblue;
+}
+
+.blackflag i, .metallica i {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: black;
+    font-size: 35px;
 }
 
 footer {
@@ -80,6 +129,17 @@ footer {
     display: flex;
     justify-content: space-evenly;
     gap: 2rem;
-    font-size: 22px;
+    font-size: 26px;
     padding: 2rem;
+}
+
+aside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: whitesmoke;
+    transform: translateX(100%);
+    transition: 1s transform ease;
 }

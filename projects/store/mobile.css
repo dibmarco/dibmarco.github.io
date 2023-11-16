@@ -71,6 +71,9 @@ nav li {
 }
 
 .price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 15px;
     left: 10px;
@@ -78,7 +81,6 @@ nav li {
     color: white;
     width: 50px;
     height: 30px;
-    text-align: center;
     border-radius: 5px;
     padding: 1px;
     font-size: 22px;

@@ -24,14 +24,14 @@
                     <div class="bf-black"></div>
                     <div class="bf-white"></div>
                 </div>
-                <i class="fa-solid fa-bag-shopping bf-bag"></i>
+                <i class="fa-solid fa-bag-shopping bf-bag blah" id="bag"></i>
             </div>
             <div class="metallica">
                 <div class="colors">
                     <div class="mt-black"></div>
                     <div class="mt-charcoal"></div>
                 </div>
-                <i class="fa-solid fa-bag-shopping"></i>
+                <i class="fa-solid fa-bag-shopping mt-bag blah" id="bag"></i>
             </div>
         </div>
         <footer>
@@ -44,7 +44,7 @@
         
         <aside class="aside1">
             <header>
-            <h1 class="asideshirtname">Black Flag T-Shirt</h1>
+            <h1 class="asideshirtname"></h1>
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -55,6 +55,24 @@
         <div class="container">
             <div class="selected-tshirt"></div>
             <div class="size-quantity">
+
+                <p>Color: <span class="aside-shirtcolor"></span></p>
+                <br>
+
+                <label for="size">Size:</label>
+                <select id="size" class="size">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+
+                <br>
+                <label for="quantity">Quantity:</label>
+                <input type="number" min="1" value="1" class="tshirt-quantity" id="quantity">
+
+                <br>
+                <button class="buy">Add to Cart</button>
+                <p class="cancel">cancel</p>
             </div>
         </div>
         <footer>

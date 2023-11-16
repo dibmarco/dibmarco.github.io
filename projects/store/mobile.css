@@ -172,6 +172,38 @@ aside {
     border-radius: 3px;
 }
 
-.size-quantity {
-    background-color: antiquewhite;
+.selected-tshirt:hover, .size-quantity:hover {
+    border: 2px solid black;
 }
+
+.size-quantity {
+    position: relative;
+    background-color: white;
+    font-size: 26px;
+}
+
+.size-quantity input, .size-quantity select {
+    width: 120px;
+    height: 25px;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 5px;
+    border: 1px solid black;
+}
+
+.size-quantity button {
+    background-color: black;
+    color: white;
+    width: 250px;
+    height: 40px;
+    font-size: 24px;
+    margin-top: 25px;
+}
+
+.cancel {
+    position: absolute;
+    bottom: 5px;
+    right: 40px;
+    font-size: 18px;
+    /* text-decoration: underline; */
+} 

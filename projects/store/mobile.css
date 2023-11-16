@@ -197,12 +197,12 @@ aside {
     width: 250px;
     height: 40px;
     font-size: 24px;
-    margin-top: 25px;
+    margin-top: 15px;
 }
 
 .cancel {
     position: absolute;
-    bottom: 5px;
+    bottom: 15px;
     right: 40px;
     font-size: 18px;
     /* text-decoration: underline; */

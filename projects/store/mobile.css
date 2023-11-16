@@ -141,7 +141,6 @@ footer {
 }
 
 aside {
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -174,6 +173,34 @@ aside {
 
 .selected-tshirt:hover, .size-quantity:hover {
     border: 2px solid black;
+}
+
+.aside-shirtcolor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* border: 1px solid black; */
+    width: 150px;
+    height: 32px;
+    margin-bottom: 15px;
+}
+
+.aside-color0, .aside-color1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+}
+
+.aside-color0 {
+    border: 1px solid white;
+    color: white;
+}
+
+.aside-color1 {
+    border: 1px solid black;
 }
 
 .size-quantity {

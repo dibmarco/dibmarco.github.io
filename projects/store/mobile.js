@@ -19,13 +19,17 @@ const mtFrame = document.querySelector(".metallica");
 const aside1 = document.querySelector(".aside1");
 const shirtName = document.querySelector(".asideshirtname");
 const selectedShirt = document.querySelector(".selected-tshirt");
-const cancelBtn = document.querySelector(".cancel");
-const size = document.getElementById("size");
-const quantity = document.getElementById("quantity");
 
 const asideColor0 = document.querySelector(".aside-color0");
 const asideColor1 = document.querySelector(".aside-color1");
+const size = document.getElementById("size");
+const quantity = document.getElementById("quantity");
 
+// aside buttons
+const bagBtn = document.querySelector(".addtobag");
+const cancelBtn = document.querySelector(".cancel");
+
+let shirtPrice;
 let shirtColor = 0;
 
 function changeColorBFBlack () {
@@ -39,7 +43,7 @@ function changeColorBFWhite () {
     shirtColor = 1
     if (shirtColor === 1) {
       bfFrame.style.backgroundImage = "url('img/blackflag_white.jpg')";
-    }
+    };
 };
 
 function changeColorMTBlack () {
@@ -47,7 +51,7 @@ function changeColorMTBlack () {
   if (shirtColor === 0) {
     mtFrame.style.backgroundImage = "url('img/metallica_black.jpg')";
   };
-}
+};
 function changeColorMTCharcoal () {
     shirtColor = 1
     if (shirtColor === 1) {
@@ -68,11 +72,13 @@ for (let i = 0; i < bag.length; i++)
 
   if (event.target.classList.contains("bf-bag")) {
     bandName = "black flag";
+    shirtPrice = 30;
     shirtName.textContent = `Black Flag T-Shirt`;
   } else {
     bandName = "metallica";
+    shirtPrice = 35;
     shirtName.textContent = `Metallica T-Shirt`;
-  }
+  };
 
   if (bandName === "black flag" && shirtColor === 0) {
     selectedShirt.style.backgroundImage = "url('img/blackflag_black.jpg')";
@@ -80,7 +86,7 @@ for (let i = 0; i < bag.length; i++)
     asideColor1.style.backgroundColor = "white";
     asideColor0.textContent = "✓";
     asideColor1.textContent = "";
-  } 
+  }; 
   
   if (bandName === "black flag" && shirtColor === 1) {
     selectedShirt.style.backgroundImage = "url('img/blackflag_white.jpg')";
@@ -89,7 +95,7 @@ for (let i = 0; i < bag.length; i++)
     asideColor1.style.color = "black";
     asideColor0.textContent = "";
     asideColor1.textContent = "✓";
-  }
+  };
 
   if (bandName === "metallica" && shirtColor === 0) {
     selectedShirt.style.backgroundImage = "url('img/metallica_black.jpg')";
@@ -97,7 +103,7 @@ for (let i = 0; i < bag.length; i++)
     asideColor1.style.backgroundColor = "darkblue";
     asideColor0.textContent = "✓";
     asideColor1.textContent = "";
-  } 
+  }; 
   
   if (bandName === "metallica" && shirtColor === 1) {
     selectedShirt.style.backgroundImage = "url('img/metallica_charcoal.jpg')";
@@ -106,10 +112,10 @@ for (let i = 0; i < bag.length; i++)
     asideColor0.textContent = "";
     asideColor1.style.color = "white";
     asideColor1.textContent = "✓";
-  }
+  };
 
-  console.log(bandName);
-  console.log(shirtColor)
+  /* console.log(bandName);
+  console.log(shirtColor) */
   
   aside1.style.transform = "translateX(0%)";
 });
@@ -128,7 +134,7 @@ asideColor0.addEventListener("click", function() {
     asideColor1.textContent = "";
     shirtColor = 0;
   }
-  console.log(bandName, shirtColor);
+  /* console.log(bandName, shirtColor); */
 });
 
 asideColor1.addEventListener("click", function () {
@@ -146,21 +152,21 @@ asideColor1.addEventListener("click", function () {
     asideColor1.style.color = "white";
     shirtColor = 1;
   }
-  console.log(bandName, shirtColor);
+  /* console.log(bandName, shirtColor); */
 });
 
-let shirtSize;
+let shirtSize = "small";
 
 size.addEventListener("change", function () {
   shirtSize = this.value;
-  console.log(shirtSize);
+  /* console.log(shirtSize); */
 });
 
-let shirtQuantity;
+let shirtQuantity = 1;
 
 quantity.addEventListener("change", function () {
   shirtQuantity = this.value;
-  console.log(shirtQuantity);
+  /* console.log(shirtQuantity); */
 });
 
 function cancel() {
@@ -168,8 +174,28 @@ function cancel() {
   shirtColor = 0;
   bfFrame.style.backgroundImage = "url('img/blackflag_black.jpg')";
   mtFrame.style.backgroundImage = "url('img/metallica_black.jpg')";
+  shirtPrice = "";
   size.value = "small";
+  shirtSize = "small"
   quantity.value = 1;
-}
+  shirtQuantity = 1;
+};
 
+let orderPrice;
+
+bagBtn.addEventListener("click", function() {
+  if (bandName === "metallica" && shirtColor === 1) {
+    shirtColor = "charcoal";
+  }
+  if (shirtColor === 0 ) {
+    shirtColor = "black";
+  }
+  if (shirtColor === 1) {
+    shirtColor = "white";
+  }
+
+  orderPrice = shirtPrice * shirtQuantity;
+
+  console.log(bandName, shirtColor, shirtSize, shirtQuantity, orderPrice);
+});
 cancelBtn.addEventListener("click", cancel);

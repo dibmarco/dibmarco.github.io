@@ -75,8 +75,8 @@ nav li {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 15px;
-    left: 10px;
+    top: 11px;
+    left: 11px;
     background-color: black;
     color: white;
     width: 50px;
@@ -199,7 +199,7 @@ aside {
     /* border: 1px solid black; */
     width: 150px;
     height: 32px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .aside-color0, .aside-color1 {

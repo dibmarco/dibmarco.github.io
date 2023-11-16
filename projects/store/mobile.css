@@ -70,6 +70,21 @@ nav li {
     border: 2px solid black;
 }
 
+.price {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    background-color: black;
+    color: white;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 1px;
+    font-size: 22px;
+    font-weight: bolder;
+}
+
 .blackflag {
     background-image: url(img/blackflag_black.jpg);
 }

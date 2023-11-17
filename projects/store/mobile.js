@@ -6,6 +6,11 @@ const bfWhite = document.querySelector(".bf-white");
 const mtBlack = document.querySelector(".mt-black");
 const mtCharcoal = document.querySelector(".mt-charcoal");
 
+const openBagHome = document.querySelector(".home-bag");
+const openBagAside = document.querySelector(".aside-bag");
+
+const closeBag = document.querySelector(".closebag");
+
 const bfBag = document.querySelector(".bf-bag");
 const mtBag = document.querySelector(".mt-bag");
 
@@ -15,8 +20,11 @@ const bag = document.querySelectorAll(".blah");
 const bfFrame = document.querySelector(".blackflag");
 const mtFrame = document.querySelector(".metallica");
 
-// aside1
+// aside windows
 const aside1 = document.querySelector(".aside1");
+const aside2 = document.querySelector(".aside2");
+
+// aside1 - selections
 const shirtName = document.querySelector(".asideshirtname");
 const selectedShirt = document.querySelector(".selected-tshirt");
 
@@ -118,6 +126,8 @@ for (let i = 0; i < bag.length; i++)
   console.log(shirtColor) */
   
   aside1.style.transform = "translateX(0%)";
+
+  /* console.log(bandName, shirtColor); */
 });
 
 asideColor0.addEventListener("click", function() {
@@ -197,5 +207,46 @@ bagBtn.addEventListener("click", function() {
   orderPrice = shirtPrice * shirtQuantity;
 
   console.log(bandName, shirtColor, shirtSize, shirtQuantity, orderPrice);
+
+  aside2.style.transform = "translateX(0%)";
+  closeBag.classList.add("bagbagbag");
 });
 cancelBtn.addEventListener("click", cancel);
+
+
+openBagHome.addEventListener("click", function () {
+  aside2.style.transform = "translateX(0%)";
+});
+openBagAside.addEventListener("click", function () {
+  aside2.style.transform = "translateX(0%)";
+  closeBag.classList.add("bagbag");
+});
+
+closeBag.addEventListener("click", function (event) {
+
+  if (event.target.classList.contains("closebag")) {
+    aside2.style.transform = "translateX(100%)";
+  };
+
+  if (event.target.classList.contains("bagbag")) {
+    aside2.style.transform = "translateX(100%)";
+    closeBag.classList.remove("bagbag");
+  };
+  
+  if (event.target.classList.contains("bagbagbag")) {
+    aside1.style.transform = "translateX(100%)";
+    aside2.style.transform = "translateX(100%)";
+    closeBag.classList.remove("bagbagbag");
+    
+    bfFrame.style.backgroundImage = "url('img/blackflag_black.jpg')";
+    mtFrame.style.backgroundImage = "url('img/metallica_black.jpg')";
+    shirtPrice = "";
+    shirtColor = 0;
+    bandName = "";
+    size.value = "small";
+    shirtSize = "small";
+    quantity.value = 1;
+    shirtQuantity = 1;  
+  };
+  
+});

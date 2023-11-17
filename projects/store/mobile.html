@@ -14,7 +14,7 @@
             <nav>
                 <ul>
                     <li><a href="#">About</a></li>
-                    <li><a href="#">Your Bag</a> <i class="fa-solid fa-bag-shopping"></i></li>
+                    <li class="home-bag"><a href="#">Your Bag</a> <i class="fa-solid fa-bag-shopping"></i></li>
                 </ul>
             </nav>
         </header>
@@ -50,7 +50,7 @@
                 <nav>
                     <ul>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">Your Bag</a> <i class="fa-solid fa-bag-shopping"></i></li>
+                        <li class="aside-bag"><a href="#">Your Bag</a> <i class="fa-solid fa-bag-shopping"></i></li>
                     </ul>
                 </nav>
             </header>
@@ -76,7 +76,7 @@
                         <input type="number" min="1" value="1" class="tshirt-quantity" id="quantity">
 
                         <br>
-                        <button class="addtobag">Add to Bag</button>
+                        <a href="#top-home"><button class="addtobag">Add to Bag</button></a>
                         <a href="#top-home"><p class="cancel">cancel</p></a>
                     </div>
             </div>
@@ -87,6 +87,19 @@
                     <a href="https://pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
                 </div>
             </footer>
+        </aside>
+
+        <aside class="aside2">
+            <p class="closebag">-X-</p>
+            <h1 id="top-bag">Your Bag <i class="fa-solid fa-bag-shopping"></i></h1>
+            <div class="frame">
+                <div class="order">
+                    <p></p>
+                </div>
+            </div>
+            <p class="continue">--continue shopping--</p>
+            <button class="placeorder">Place Order</button>
+            <p>empty bag</p>
         </aside>
 
     </main>

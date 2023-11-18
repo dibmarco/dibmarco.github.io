@@ -14,22 +14,40 @@
     </style>
 </head>
 <body>
-    <div class="square"></div>
+    <div class="square">Yellow</div>
+
     <input type="radio" class="yellow" name="color" value="yellow">
     <label for="yellow">Yellow</label>
 
+    <input type="radio" class="center" name="center" value="center">
+    <label for="center">Center</label>
+
     <script>
-        const yellowRadio = document.querySelector(".yellow");
         const div = document.querySelector(".square");
+        const yellowRadio = document.querySelector(".yellow");
+        const centerRadio = document.querySelector(".center");
 
         yellowRadio.addEventListener("click", function (event) {
-            if (!yellowRadio.classList.contains("checked")) {
+            if (!yellowRadio.classList.contains("checked-yellow")) {
                 div.style.backgroundColor = "yellow";
-                yellowRadio.classList.add("checked");
+                yellowRadio.classList.add("checked-yellow");
             } else {
                 yellowRadio.checked = false;
                 div.style.backgroundColor = "white";
-                yellowRadio.classList.remove("checked");
+                yellowRadio.classList.remove("checked-yellow");
+            };
+        });
+
+        centerRadio.addEventListener("click", function (event) {
+            if (!centerRadio.classList.contains("checked-center")) {
+                div.style.display = "flex";
+                div.style.alignItems = "center";
+                div.style.justifyContent = "center";
+                centerRadio.classList.add("checked-center");
+            } else {
+                div.style.display = "block";
+                centerRadio.classList.remove("checked-center");
+                centerRadio.checked = false;
             };
         });
     </script>

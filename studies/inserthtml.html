@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Adjacent HTML</title>
+</head>
+
+<style>
+    .text_area {
+        width: 210px;
+        min-height: 30px;
+        height: fit-content;
+        border: 1px solid black;
+        margin-top: 10px;
+    }
+
+    .text {
+        border-top: 1px dashed red;
+        padding-top: 10px;
+    }
+</style>
+
+<body>
+    <div class="input">
+        <input type="text" class="input_text"><button class="post_button">Post</button>
+    </div>
+    <div class="text_area"></div>
+
+    <script>
+        const postInput = document.querySelector(".input_text");
+        const postBtn = document.querySelector(".post_button");
+        const textArea = document.querySelector(".text_area");
+
+
+        postBtn.addEventListener("click", function() {
+            
+            const postContent = postInput.value;
+            postInput.value = "";
+            console.log(postContent);
+
+            const html = `
+            <p class="text">${postContent}</p>
+            `;
+
+            textArea.insertAdjacentHTML("afterbegin", html);
+
+        });  
+    </script>
+</body>
+</html>

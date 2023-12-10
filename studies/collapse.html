@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collapse Buttons</title>
+  </head>
+
+  <style>
+    main {
+      width: 600px;
+      margin: 0 auto;
+    }
+
+    .title {
+      background-color: grey;
+      text-align: center;
+      margin-bottom: 3px;
+      cursor: pointer;
+    }
+
+    .content {
+      text-align: justify;
+    }
+
+    .hide {
+      display: none;
+    }
+  </style>
+
+  <body>
+    <main>
+      <div class="title">
+        <h1>Click <span class="arrow">&darr;</span></h1>
+      </div>
+      <div class="content hide">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
+          nesciunt!
+        </p>
+      </div>
+
+      <div class="title">
+        <h1>Click <span class="arrow">&darr;</span></h1>
+      </div>
+      <div class="content hide">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
+          animi eum repellat minima, asperiores ut quos accusantium beatae
+          facere rerum laudantium autem, reiciendis obcaecati fugiat omnis.
+          Ratione molestias incidunt a. Corporis harum consequatur nam placeat
+          impedit natus est non eius esse reiciendis, vel sequi quos quasi at
+          cupiditate alias nulla repellat et sed quidem quo dolore? Corrupti rem
+          adipisci doloribus, iure incidunt architecto ullam quam similique esse
+          perferendis ut totam ab doloremque explicabo inventore animi! Quos
+          iusto distinctio excepturi temporibus commodi suscipit accusamus, iste
+          eos magnam quasi sit sint illo omnis nisi exercitationem molestiae
+          adipisci aliquam aliquid voluptate fugiat nobis! Omnis nulla magnam
+          maiores? Repudiandae assumenda voluptatum, vero laborum nisi dolorum
+          libero laboriosam iste laudantium aliquam numquam minus, animi impedit
+          unde dolore aperiam, nobis expedita adipisci blanditiis necessitatibus
+          inventore amet doloribus? Corporis consequatur sequi mollitia ullam
+          est. Excepturi, omnis delectus minima aliquid eos ex incidunt unde
+          quidem sapiente corporis perferendis tempore repellat facilis magni
+          laboriosam ratione quas a blanditiis. In laborum nisi explicabo,
+          sapiente amet totam numquam dicta sed autem quaerat hic praesentium
+          voluptatibus earum facere accusamus. Officia minus ex molestias fugiat
+          a, minima molestiae ratione dicta omnis recusandae rem aliquid esse
+          optio iusto adipisci pariatur debitis soluta cumque repellendus!
+        </p>
+      </div>
+
+      <div class="title">
+        <h1>Click <span class="arrow">&darr;</span></h1>
+      </div>
+      <div class="content hide">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
+          nesciunt!
+        </p>
+      </div>
+    </main>
+
+    <script>
+      // Elements
+      const title = document.querySelectorAll(".title");
+      const content = document.querySelectorAll(".content");
+      const arrowUpDown = document.querySelectorAll(".arrow");
+
+      // Function
+      const toggleHide = function (i) {
+        content[i].classList.toggle("hide");
+        arrowUpDown[i].innerHTML = content[i].classList.contains("hide")
+          ? "&darr;"
+          : "&uarr;";
+      };
+
+      // Event handlers
+      title.forEach(function (show, i) {
+        show.addEventListener("click", () => toggleHide(i)); // this callback only works with an anonymous function
+      });
+    </script>
+  </body>
+</html>

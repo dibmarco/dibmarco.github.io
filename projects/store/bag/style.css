@@ -1,0 +1,46 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+}
+
+.container__tshirt {
+  display: flex;
+  gap: 1rem;
+}
+
+.container__bag {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+
+.bag_header {
+    /* border: 1px solid black; */
+    text-align: center;
+}
+
+.bag_table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid black; */
+}
+
+table {
+    width: 550px;
+    text-align: center;
+}
+
+thead, tfoot {
+    background-color: whitesmoke;
+}
+
+select,
+input {
+  width: 80px;
+  text-align: center;
+}

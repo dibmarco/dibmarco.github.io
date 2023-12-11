@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <title>Rock T-Shirts</title>
+  </head>
+
+  <style>
+    main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 400px;
+      height: 90vh;
+      margin: 0 auto;
+    }
+
+    .container {
+      border: 2px solid black;
+    }
+
+    .blackflag_tshirt {
+      /* border: 1px solid black; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+    }
+
+    .image {
+      /* border: 1px solid black; */
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      height: 410px;
+      overflow: hidden;
+    }
+
+    /* img:hover {
+      content: url("../img/blackflag_white.jpg");
+    } */
+
+    .bag_icon {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      padding: 3px;
+      top: -56px;
+      font-size: 25px;
+      cursor: pointer;
+      width: 45px;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .selections {
+      /* border: 1px solid black; */
+      border-bottom: none;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      height: 188px;
+      background-color: white;
+      bottom: -190px;
+      font-family: monospace;
+      font-size: 18px;
+      transition: 0.5s all ease;
+    }
+
+    .selections select,
+    .selections input {
+      text-align: center;
+      font-family: monospace;
+      width: 120px;
+    }
+
+    .addtobag_btn {
+      background-color: black;
+      color: white;
+      font-family: monospace;
+      font-size: 16px;
+    }
+
+    .color_selection, .color0, .color1 {
+      /* border: 1px solid black; */
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 80px;
+      height: 40px;
+    }
+
+    .color0,
+    .color1 {
+      border: 1px solid black;
+      width: 25px;
+      height: 25px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    .color0 {
+      color: white;
+      background-color: black;
+    }
+  </style>
+
+  <body>
+    <main>
+      <div class="container">
+        <div class="blackflag_tshirt">
+          <div class="image">
+            <img
+              src="../img/blackflag_black.jpg"
+              alt=""
+              width="300"
+              id="tshirt_image"
+            />
+            <div class="selections">
+              <p class="bag_icon"><i class="fa-solid fa-bag-shopping"></i></p>
+              <label for="size">Size:</label>
+              <select id="size" class="size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+              </select>
+
+              <br />
+              <label for="quantity">Quantity:</label>
+              <input
+                type="number"
+                min="1"
+                value="1"
+                class="tshirt-quantity"
+                id="quantity"
+              />
+
+              <br />
+              <button class="addtobag_btn blackflag_atb">Add to Bag</button>
+            </div>
+          </div>
+          <div class="color_selection">
+            <div class="color0">✓</div>
+            <div class="color1"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script>
+    const bagIconBtn = document.querySelector(".bag_icon");
+    const selections = document.querySelector(".selections");
+    const tshirtImage = document.getElementById("tshirt_image");
+    const color0 = document.querySelector(".color0");
+    const color1 = document.querySelector(".color1");
+
+    let openClose;
+    const openCloseSelections = () => {
+      openClose = !openClose;
+      selections.style.bottom = openClose ? "0px" : "-190px";
+      tshirtImage.style.opacity = openClose ? "70%" : "100%";
+    };
+
+    const selectColor0 = function () {
+      tshirtImage.src = "../img/blackflag_black.jpg";
+      color0.textContent = "✓";
+      color1.textContent = "";
+    };
+
+    const selectColor1 = function () {
+      tshirtImage.src = "../img/blackflag_white.jpg";
+      color1.textContent = "✓";
+      color0.textContent = "";
+    };
+
+    bagIconBtn.addEventListener("click", openCloseSelections);
+    color0.addEventListener("click", selectColor0);
+    color1.addEventListener("click", selectColor1);
+  </script>
+</html>

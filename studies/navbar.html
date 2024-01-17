@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NavBar</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100px;
+      background-color: whitesmoke;
+      position: fixed;
+      top: 0;
+      transition: 0.5s ease;
+    }
+
+    header h1 {
+      font-size: 38px;
+    }
+
+    main {
+      margin-top: 50px;
+    }
+
+    .section1, .section2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin: 0 auto;
+      height: 100vh;
+      width: 800px;
+      font-size: 22px;
+      text-align: justify;
+    }
+
+    /* .section1 {
+      margin-top: -45px;
+    } */
+
+    .section1 h1, .section2 h1 {
+      padding-bottom: 20px;
+    }
+
+    .section2 {
+      opacity: 8%;
+      transition: 0.5s ease;
+    }
+  </style>
+
+  <body>
+    <header>
+      <h1 class="headerH1">NavBar</h1>
+    </header>
+    <main>
+      <section class="section1">
+        <h1>Section 1</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur
+          harum voluptatum pariatur nihil nisi, iusto nemo odio obcaecati aut
+          distinctio ut hic repellat accusantium totam, iure error repellendus
+          tempore officia eum facilis! Exercitationem reprehenderit voluptates
+          doloribus molestias, eum possimus sit recusandae, tempore magni
+          aliquam odio doloremque quidem adipisci excepturi repellat est qui
+          soluta inventore voluptatem, laudantium libero mollitia? Omnis aperiam
+          ad nesciunt eius iste earum modi ab? Dolor aspernatur eos ab repellat
+          ullam quibusdam tempore, veniam veritatis minus amet velit magnam
+          ipsam odit voluptatum dolorem maiores ea architecto explicabo
+          consequuntur. Suscipit odio cum doloribus impedit atque, dolores nam
+          odit quisquam architecto vel eos, dolorum magnam possimus fugit
+          voluptate quasi laborum illo quo a quaerat beatae nostrum. Culpa illum
+          non voluptates officiis vel assumenda quidem magni minus? Eveniet,
+          voluptate id praesentium ullam aperiam repellendus animi? Quidem qui
+          tenetur adipisci minima odio odit veniam sint soluta laudantium iure
+          magnam tempora necessitatibus, quo accusantium vitae, iste delectus,
+          harum dolor nemo. Mollitia soluta repudiandae reprehenderit aperiam
+          fugit fuga expedita illo modi labore. Molestiae dignissimos eius,
+          atque excepturi harum quos nulla sapiente doloremque hic et sed earum?
+          Rerum quia error, et adipisci ea nisi tempore ex dignissimos officiis.
+          Adipisci rerum eum repudiandae vitae neque sunt explicabo id fugiat
+          porro rem tempora ab corrupti repellat nam dolorum, eligendi ex
+          suscipit accusantium consectetur. Officia dolorum nesciunt
+          necessitatibus, eius iste magni ullam tempore beatae nulla ad sit
+          libero perferendis labore doloremque consectetur cumque autem possimus
+          corporis culpa consequatur. Placeat molestias officia, id cupiditate
+          iusto earum aliquid quibusdam sequi.
+        </p>
+      </section>
+      <section class="section2">
+        <h1>Section 2</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur
+          harum voluptatum pariatur nihil nisi, iusto nemo odio obcaecati aut
+          distinctio ut hic repellat accusantium totam, iure error repellendus
+          tempore officia eum facilis! Exercitationem reprehenderit voluptates
+          doloribus molestias, eum possimus sit recusandae, tempore magni
+          aliquam odio doloremque quidem adipisci excepturi repellat est qui
+          soluta inventore voluptatem, laudantium libero mollitia? Omnis aperiam
+          ad nesciunt eius iste earum modi ab? Dolor aspernatur eos ab repellat
+          ullam quibusdam tempore, veniam veritatis minus amet velit magnam
+          ipsam odit voluptatum dolorem maiores ea architecto explicabo
+          consequuntur. Suscipit odio cum doloribus impedit atque, dolores nam
+          odit quisquam architecto vel eos, dolorum magnam possimus fugit
+          voluptate quasi laborum illo quo a quaerat beatae nostrum. Culpa illum
+          non voluptates officiis vel assumenda quidem magni minus? Eveniet,
+          voluptate id praesentium ullam aperiam repellendus animi? Quidem qui
+          tenetur adipisci minima odio odit veniam sint soluta laudantium iure
+          magnam tempora necessitatibus, quo accusantium vitae, iste delectus,
+          harum dolor nemo. Mollitia soluta repudiandae reprehenderit aperiam
+          fugit fuga expedita illo modi labore. Molestiae dignissimos eius,
+          atque excepturi harum quos nulla sapiente doloremque hic et sed earum?
+          Rerum quia error, et adipisci ea nisi tempore ex dignissimos officiis.
+          Adipisci rerum eum repudiandae vitae neque sunt explicabo id fugiat
+          porro rem tempora ab corrupti repellat nam dolorum, eligendi ex
+          suscipit accusantium consectetur. Officia dolorum nesciunt
+          necessitatibus, eius iste magni ullam tempore beatae nulla ad sit
+          libero perferendis labore doloremque consectetur cumque autem possimus
+          corporis culpa consequatur. Placeat molestias officia, id cupiditate
+          iusto earum aliquid quibusdam sequi.
+        </p>
+      </section>
+    </main>
+  </body>
+
+  <script>
+    const header = document.querySelector("header");
+    const headerH1 = document.querySelector(".headerH1");
+
+    window.addEventListener("scroll", () => {
+      //   const scrollY = window.scrollY;
+      //   console.log(scrollY);
+      const shrink = window.scrollY > 0;
+
+      header.style.height = shrink ? "45px" : "100px";
+      header.style.opacity = shrink ? "90%" : "100%";
+      header.style.backgroundColor = shrink ? "black" : "whitesmoke";
+      headerH1.style.fontSize = shrink ? "32px" : "48px";
+      headerH1.style.color = shrink ? "white" : "black";
+    });
+
+    // observer
+
+    const section2 = document.querySelector(".section2");
+
+    const section2Scroll = function (entries) {
+      console.log(entries[0]);
+
+     if (entries[0].isIntersecting) {
+      section2.style.opacity = "100%";
+     };
+     if (!entries[0].isIntersecting) {
+      section2.style.opacity = "8%";
+     };
+    };
+
+    const observer = new IntersectionObserver(section2Scroll, {
+      root: null,
+      threshold: 0.4,
+    });
+
+    observer.observe(section2);
+  </script>
+</html>

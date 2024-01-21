@@ -37,25 +37,25 @@
 
     .slide1 {
       background-color: black;
-      background-image: url(../studies/imgs/alaska1.jpg);
+      background-image: url(../JavaScript/imgs/alaska1.jpg);
     }
 
     .slide2 {
       /* left: 100%; */
       background-color: blue;
-      background-image: url(../studies/imgs/alaska2.jpg);
+      background-image: url(../JavaScript/imgs/alaska2.jpg);
     }
 
     .slide3 {
       /* left: 200%; */
       background-color: red;
-      background-image: url(../studies/imgs/alaska3.jpg);
+      background-image: url(../JavaScript/imgs/alaska3.jpg);
     }
 
     .slide4 {
       /* left: 300%; */
       background-color: brown;
-      background-image: url(../studies/imgs/alaska4.jpg);
+      background-image: url(../JavaScript/imgs/alaska4.jpg);
     }
 
     .button-right,
@@ -70,9 +70,6 @@
       z-index: 1;
       cursor: pointer;
       color: black;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       font-size: 48px;
       opacity: 90%;
     }
@@ -92,7 +89,7 @@
 
     .button-right:focus,
     .button-left:focus {
-      outline: 1px solid black;
+      border: 1px solid black;
     }
 
     .dots {
@@ -126,8 +123,8 @@
   <body>
     <main>
       <div class="container">
-        <div class="button-right">&#8594;</div>
-        <div class="button-left">&#8592;</div>
+        <button class="button-right">&#8594;</button>
+        <button class="button-left">&#8592;</button>
         <div class="slide slide1"></div>
         <div class="slide slide2"></div>
         <div class="slide slide3"></div>

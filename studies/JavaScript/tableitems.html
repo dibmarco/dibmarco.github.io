@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table Item</title>
+  </head>
+  <style>
+    table {
+      text-align: center;
+      width: 500px;
+    }
+
+    thead, tfoot {
+        background-color: grey;
+    }
+  </style>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody class="table"></tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">Grand Total</td>
+          <td>$100</td>
+        </tr>
+      </tfoot>
+    </table>
+    <button class="add_item">Add Item</button>
+  </body>
+  <script>
+    //elements
+    const addItemBtn = document.querySelector(".add_item");
+    const table = document.querySelector(".table");
+
+    // variables
+    let shoe = 0;
+    let shoePrice = 30;
+
+    //event handler
+    addItemBtn.addEventListener("click", function () {
+      shoe++;
+      console.log(shoe);
+
+      if (shoe === 4) {
+        shoe = 1;
+      }
+
+      const tableItem = `
+        <tr>
+        <td><img src="../JavaScript/imgs/shoe-${shoe}.png" width="50px" alt="" /></td>
+        <td>Shoe ${shoe}<br />Size: 10</td>
+        <td>$30</td>
+        <td>2</td>
+        <td>$70</td>
+        </tr>
+        `;
+
+      table.insertAdjacentHTML("beforebegin", tableItem);
+    });
+  </script>
+</html>

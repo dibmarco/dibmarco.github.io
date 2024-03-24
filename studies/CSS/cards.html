@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="cards.css">
+    <title>Document</title>
+</head>
+
+<style>
+
+    main {
+        display: flex;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .coffee1, .coffee2, .coffee3 {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 300px;
+        height: 200px;
+        overflow: hidden;
+        border: 1px solid black;
+        border-radius: 10px;
+        margin: 5px;
+    }
+
+    .coffee1 h1, .coffee2 h1, .coffee3 h1 {
+        position: absolute;
+        width: 100%;
+        top: -100px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .coffee1 p, .coffee2 p, .coffee3 p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        padding: 2px;
+        bottom: -100px;
+        right: 10px;
+        width: 50px;
+        height: 25px;
+        background-color: red;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .coffee1:hover img,
+    .coffee2:hover img,
+    .coffee3:hover img {
+        opacity: 70%;
+    }
+
+    .coffee1:hover h1,
+    .coffee2:hover h1,
+    .coffee3:hover h1 {
+        top: 3px;
+        z-index: 1;
+    }
+
+    .coffee1:hover p,
+    .coffee2:hover p,
+    .coffee3:hover p {
+        bottom: 5px;
+        z-index: 1;
+    }
+
+
+</style>
+
+<body>
+    <main>
+            <div class="coffee1">
+                <h1>Coffee 1</h1>
+                <img src="../projects/basicHTML/imgs/coffee1.jpg" alt="Coffee" width="300px">
+                <p>Button</p>
+            </div>
+            <div class="coffee2">
+                <h1>Coffee 2</h1>
+                <img src="../projects/basicHTML/imgs/coffee2.jpg" alt="Coffee" width="300px">
+                <p>Button1</p>
+            </div>
+            <div class="coffee3">
+                <h1>Coffee 3</h1>
+                <img src="../projects/basicHTML/imgs/coffee3.jpg" alt="Coffee" width="300px">
+                <p>Button1</p>
+            </div>
+    </main>
+</body>
+</html>

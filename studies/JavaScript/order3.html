@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selected Item Example</title>
+</head>
+
+<body>
+    <label for="items">Select an item:</label>
+    <select id="items">
+        <option value="item1">Item 1</option>
+        <option value="item2">Item 2</option>
+        <option value="item3">Item 3</option>
+    </select>
+
+    <script>
+        document.getElementById('items').addEventListener('change', function () {
+            const selectedValue = this.value;
+            console.log(`You selected: ${selectedValue}`);
+        });
+    </script>
+</body>
+</html>

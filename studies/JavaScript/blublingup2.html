@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubling Up 2</title>
+</head>
+
+<style>
+    .container, .sibling1, .sibling2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        border: 1px solid black;
+        width: 350px;
+        height: 350px;
+        background-color: azure;
+        /* cursor: pointer; */
+    }
+
+    .sibling1 {
+        width: 250px;
+        height: 250px;
+        background-color: aquamarine;
+    }
+
+    .sibling2 {
+        width: 150px;
+        height: 150px;
+        background-color: beige;
+    }
+</style>
+
+<body>
+    
+    <div class="container">
+        <div class="sibling1">
+            <div class="sibling2"></div>
+        </div>
+    </div>
+
+<script>
+   const container = document.querySelector('.container');
+   const sibling1 = document.querySelector('.sibling1');
+   const sibling2 = document.querySelector('.sibling2');
+
+   const changeColor = function (e) {
+
+    const closest = e.target.closest('.sibling1');
+    console.log(closest)
+    if (!closest) return; // guard clause (unnecessary here)
+
+    if (e.target.classList.contains('container')) {
+        container.style.backgroundColor = 'grey';
+    };
+
+    if (e.target.classList.contains('sibling1')) {
+        sibling1.style.backgroundColor = 'orangered';
+    };
+
+    if (e.target.classList.contains('sibling2')) {
+        sibling2.style.backgroundColor = 'darkblue';
+    };
+   };
+
+   container.addEventListener('click', changeColor);
+</script>
+</body>
+</html>

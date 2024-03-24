@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    .order {
+      border: 1px solid red;
+      margin-top: 2px;
+    }
+
+    .extras {
+      display: flex;
+    }
+
+    .delete_order {
+      padding-left: 50px;
+      font-size: 10px;
+      cursor: pointer;
+    }
+  </style>
+
+  <body>
+    <div class="menu">
+      <fieldset class="drink">
+        <legend>Select your drink:</legend>
+
+        <p>
+          <input
+            type="radio"
+            name="drink"
+            id="orangejuice"
+            value="Orange Juice"
+          />
+          <label for="drink1">Orange Juice</label>
+        </p>
+
+        <p>
+          <input
+            type="radio"
+            name="drink"
+            id="applejuice"
+            value="Apple Juice"
+          />
+          <label for="drink2">Apple Juice</label>
+        </p>
+
+        <p>
+          <input 
+            type="radio" 
+            name="drink" 
+            id="coke" 
+            value="Coke" 
+            />
+          <label for="drink3">Coke</label>
+        </p>
+      </fieldset>
+
+      <fieldset class="meal">
+        <legend>Select your meal:</legend>
+
+        <p>
+          <input
+            type="radio"
+            name="meal"
+            id="regularburger"
+            value="Regular Burger"
+          />
+          <label for="meal1">Regular Burger</label>
+        </p>
+
+        <p>
+          <input
+            type="radio"
+            name="meal"
+            id="happyburger"
+            value="Happy Burger"
+          />
+          <label for="meal2">Happy Burger</label>
+        </p>
+
+        <p>
+          <input
+            type="radio"
+            name="meal"
+            id="doubleburger"
+            value="Double Burger"
+          />
+          <label for="meal3">Double Burger</label>
+        </p>
+
+        <div class="extras">
+          <p>
+            <input
+              type="checkbox"
+              name="extra"
+              id="extra_onion"
+              value="Extra Onion"
+            />
+            <label for="extra1">Extra Onion</label>
+          </p>
+
+          <p>
+            <input
+              type="checkbox"
+              name="extra"
+              id="extra_cheese"
+              value="Extra Cheese"
+            />
+            <label for="extra2">Extra Cheese</label>
+          </p>
+        </div>
+      </fieldset>
+
+      <br />
+
+      <button onclick="printOrder()">Print Order</button>
+    </div>
+
+    <div class="orders">
+      <!-- <div class="order no_1">
+            <p>Order # <span class="order_no"></span></p>
+            <p>Drink: <span class="selected_drink"></span></p>
+            <p>Meal: <span class="selected_meal"></span></p>
+            <p>Extras: <span class="selected_extras"></span></p>
+        </div> -->
+    </div>
+
+    <script>
+      const extraOnions = document.getElementById("extra_onion");
+      const extraCheese = document.getElementById("extra_cheese");
+
+      let includeOnions = "";
+      let includeCheese = "";
+
+      extraOnions.addEventListener("change", () => (extraOnions.checked) ? /* console.log("onions") */ includeOnions = "Extra Onions" : /* console.log("no onions") */ includeOnions = "");
+
+      extraCheese.addEventListener("change", () => (extraCheese.checked) ? includeCheese = "Extra Cheese" : includeCheese = "");
+
+      let orderNumber = 1;
+
+      const printOrder = () => {
+        const drinkElement = document.querySelector(
+          'input[name="drink"]:checked'
+        );
+        const mealElement = document.querySelector(
+          'input[name="meal"]:checked'
+        );
+        const orderPrints = document.querySelector(".orders");
+
+        if (drinkElement && mealElement) {
+          const drinkSelection = drinkElement.value;
+          const mealSelection = mealElement.value;
+
+          const selections = {
+            orderNo: orderNumber++,
+            drink: drinkSelection,
+            meal: mealSelection,
+            extras: `${includeOnions}   ${includeCheese}`,
+          };
+
+          const orderPrint = `
+            <div class="order no_${selections.orderNo}">
+                <p>Order #: ${selections.orderNo}</p>
+                <p>Drink: ${selections.drink}</p>
+                <p>Meal: ${selections.meal}</p>
+                <p>Extras: <span>${selections.extras}</span></p>
+                <p class="delete_order no_${selections.orderNo}">Delete Order</p>
+            </div>
+            `;
+
+          orderPrints.insertAdjacentHTML("afterbegin", orderPrint);
+
+          drinkElement.checked = false;
+          mealElement.checked = false;
+          extraOnions.checked = false;
+          extraCheese.checked = false;
+
+          includeOnions = "";
+          includeCheese = "";
+
+          const orderPrinted = document.querySelectorAll(".order");
+          const deleteOrder = document.querySelectorAll(".delete_order");
+
+          /* console.log(orderPrinted, deleteOrder); */
+
+          deleteOrder.forEach((del, i) => {
+            del.addEventListener("click", () => {
+              const confirmation = confirm(
+                "Do you really want to delete this order?"
+              );
+              if (confirmation) {
+                orderPrinted[i].remove(); // Removes the selected order from the DOM
+                console.log(
+                document.querySelectorAll(".order"),
+                document.querySelectorAll(".delete_order")
+                );
+              };
+            });
+          });
+
+          // deleteOrder.forEach(function (del, i) {
+          //   del.addEventListener("click", function () {
+          //     /* console.log("Order Deleted"); */
+          //     orderPrinted[i].innerHTML = "";
+          //     orderPrinted[i].style.border = "none";
+
+          //     console.log(orderPrinted, deleteOrder);
+          //   });
+          // });
+        } else {
+          alert("Please select both a drink and a meal.");
+        }
+      }
+    </script>
+  </body>
+</html>

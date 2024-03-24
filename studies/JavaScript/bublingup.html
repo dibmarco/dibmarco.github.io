@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubling Up</title>
+</head>
+
+<style>
+    .container, .parent, .sibling {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        border: 1px solid black;
+        width: 350px;
+        height: 500px;
+        background-color: azure;
+        /* cursor: pointer; */
+    }
+
+    .parent {
+        width: 250px;
+        height: 400px;
+        background-color: aquamarine;
+    }
+
+    .sibling {
+        width: 100px;
+        height: 30px;
+        border: 1px solid orangered;
+        background-color: beige;
+    }
+</style>
+
+<body>
+    
+    <div class="container">
+        <div class="parent">
+            <p class="sibling">Click me</p>
+        </div>
+    </div>
+
+<script>
+   const bgRed = (e) => this.style.backgroundColor = 'red';
+ 
+   document.querySelector('.sibling').addEventListener('click', function (e) {
+    this.style.backgroundColor = 'red';
+    console.log('sibling', e.target);
+
+    // // stop propagation
+    // e.stopPropagation();
+   });
+   
+   document.querySelector('.parent').addEventListener('click', function (e) {
+    this.style.backgroundColor = 'red';
+    console.log('parent', e.target);
+   });
+   
+   document.querySelector('.container').addEventListener('click', function (e) {
+    this.style.backgroundColor = 'red';
+    console.log('container', e.target);
+   });
+</script>
+</body>
+</html>

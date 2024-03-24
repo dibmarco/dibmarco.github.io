@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Social Media Icons</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        border: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-family: monospace;
+    }
+
+    main {
+        display: flex;
+        margin: 0 auto;
+        width: 400px;
+        height: 150px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    p {
+        margin-right: 3px;
+        font-size: 2rem;
+    }
+
+    .icons-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* border: 1px solid black; */
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+    }
+
+    .share {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        background-color: white;
+        border-radius: 50%;
+        width: 25px;
+        height: 30px;
+        z-index: 1;
+        font-size: 1.4rem;
+    }
+
+    .share, .facebook, .instagram, .pinterest {
+        position: absolute;
+        transition: 0.5s all ease;
+    }
+
+    .facebook, .instagram, .pinterest {
+        font-size: 1.6rem;
+    }
+
+
+    .icons-container:hover .facebook {
+        transform: translateY(-27px);
+        /* transition-delay: 0.1s; */
+        /* font-size: 2rem; */
+    }
+    
+    .icons-container:hover .instagram {
+        transform: translateX(27px);
+        /* transition-delay: 0.25s; */
+        /* font-size: 2rem; */
+    }
+
+    .icons-container:hover .pinterest {
+        transform: translateY(27px);
+        /* transition-delay: 0.45s; */
+        /* font-size: 2rem; */
+    }
+
+
+</style>
+
+<body>
+    <main>
+
+        <p>Social Media</p>
+
+        <div class="icons-container">
+
+            <div class="share"><i class="fa-solid fa-share-nodes"></i></div>
+            <div class="facebook"><i class="fa-brands fa-facebook"></i></div>
+            <div class="instagram"><i class="fa-brands fa-instagram"></i></div>
+            <div class="pinterest"><i class="fa-brands fa-pinterest"></i></div>
+
+        </div>
+    </main>
+</body>
+</html>

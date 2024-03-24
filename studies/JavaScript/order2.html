@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Selection</title>
+</head>
+
+<body>
+
+    <fieldset class="drink">
+        <legend>Select your drink:</legend>
+
+        <p>
+            <input type="radio" name="drink" id="orangejuice" value="Orange Juice">
+            <label for="drink1">Orange Juice</label>
+        </p>
+
+        <p>
+            <input type="radio" name="drink" id="applejuice" value="Apple Juice">
+            <label for="drink2">Apple Juice</label>
+        </p>
+
+        <p>
+            <input type="radio" name="drink" id="coke" value="Coke">
+            <label for="drink3">Coke</label>
+        </p>
+
+    </fieldset>
+
+    <fieldset class="meal">
+        <legend>Select your meal:</legend>
+
+        <p>
+            <input type="radio" name="meal" id="regularburger" value="Regular Burger">
+            <label for="meal1">Regular Burger</label>
+        </p>
+
+        <p>
+            <input type="radio" name="meal" id="happyburger" value="Happy Burger">
+            <label for="meal2">Happy Burger</label>
+        </p>
+
+        <p>
+            <input type="radio" name="meal" id="doubleburger" value="Double Burger">
+            <label for="meal3">Double Burger</label>
+        </p>
+
+    </fieldset>
+
+    <p>Your order includes: <span id="orderContent"></span></p>
+
+    <button onclick="getSelections()">Get Selections</button>
+
+
+    <script>
+        function getSelections() {
+            const drinkElement = document.querySelector('input[name="drink"]:checked');
+            const mealElement = document.querySelector('input[name="meal"]:checked');
+
+        if (drinkElement && mealElement) {
+            const drinkSelection = drinkElement.value;
+            const mealSelection = mealElement.value;
+
+            const selections = {
+                drink: drinkSelection,
+                meal: mealSelection
+                };
+
+            document.getElementById('orderContent').textContent = `${selections.drink} and ${selections.meal}`;
+            console.log(selections);
+
+        } else {
+        alert("Please select both a drink and a meal.");
+        }
+    };
+    </script>
+
+</body>
+</html>

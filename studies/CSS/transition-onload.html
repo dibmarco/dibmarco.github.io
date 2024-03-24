@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition On Load</title>
+</head>
+
+<style>
+    .container {
+        animation: transitionIn 0.75s;
+    }
+    
+    @keyframes transitionIn {
+        
+        from {
+            opacity: 0;
+            /* transform: rotateX(-10deg); */
+            transform: translateY(-5px);
+        }
+
+        to {
+            opacity: 1;
+            /* transform: rotateX(0deg); */
+            transform: translateY(0);
+        }
+
+    }
+</style>
+
+<body>
+    
+    <h1>Transition On Load</h1>
+    
+    <nav>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+    </nav>
+
+    <section class="container">
+        <h2>Sub-title</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione placeat commodi, cupiditate libero autem tempore quis enim minima, sapiente atque accusamus reprehenderit beatae exercitationem quod! Sit dignissimos aspernatur asperiores enim tempora aliquid iure at reiciendis dolore modi, facilis architecto sunt expedita quasi laborum? Praesentium in, aliquam nam eligendi tempora nostrum.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione placeat commodi, cupiditate libero autem tempore quis enim minima, sapiente atque accusamus reprehenderit beatae exercitationem quod! Sit dignissimos aspernatur asperiores enim tempora aliquid iure at reiciendis dolore modi, facilis architecto sunt expedita quasi laborum? Praesentium in, aliquam nam eligendi tempora nostrum.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione placeat commodi, cupiditate libero autem tempore quis enim minima, sapiente atque accusamus reprehenderit beatae exercitationem quod! Sit dignissimos aspernatur asperiores enim tempora aliquid iure at reiciendis dolore modi, facilis architecto sunt expedita quasi laborum? Praesentium in, aliquam nam eligendi tempora nostrum.</p>
+    </section>
+</body>
+</html>

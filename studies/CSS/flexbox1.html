@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+</head>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    margin-top: 5%;
+}
+
+.container {
+    display: flex;
+    max-width: 500px;
+    border: 1px solid black;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-inline: auto;
+    gap: 1rem;
+    padding: 5px;
+}
+
+.box {
+    display: flex;
+    background-color: bisque;
+    border: 1px solid black;
+    min-width: 8rem;
+    min-height: 8rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.seven {
+    width: 400px;
+    text-align: left;
+}
+
+.box:hover {
+    background-color: lightgray;
+}
+
+</style>
+
+<body>
+    
+<main>
+
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+        <div class="box">Box 6</div>
+        <div class="box seven">Box 7</div>
+    </div>
+
+</main>
+
+</body>
+</html>

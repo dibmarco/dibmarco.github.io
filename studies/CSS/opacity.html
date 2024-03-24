@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .image-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .image-container img {
+            width: 200px;
+            height: 200px;
+            opacity: 1;
+            transition: opacity 0.3s;
+        }
+
+        .image-container:hover img:not(:hover) {
+            opacity: 0.5;
+        }
+    </style>
+    <title>Image Hover Effect</title>
+</head>
+
+<body>
+    <div class="image-container">
+        <img src="../projects/basicHTML/imgs/coffee1.jpg" alt="Image 1" width="200px">
+        <img src="../projects/basicHTML/imgs/coffee2.jpg" alt="Image 2" width="200px">
+        <img src="../projects/basicHTML/imgs/coffee3.jpg" alt="Image 3" width="200px">
+    </div>
+</body>
+
+</html>

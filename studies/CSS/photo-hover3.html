@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    height: calc(100vh - 100px);
+}
+
+img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    transition: 0.5s ease all;
+}
+
+.container {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.container:hover .image2 {
+    transform: translateX(-100%);
+}
+
+</style>
+
+<body>
+    <main>
+        <div class="container">
+            <img src="../projects/basicHTML/imgs/coffee1.jpg" alt="coffe1" width="250" class="image1">
+            <img src="../projects/basicHTML/imgs/coffee2.jpg" alt="coffe1" width="250" class="image2">
+        </div>
+    </main>
+</body>
+</html>

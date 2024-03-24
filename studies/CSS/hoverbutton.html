@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Button</title>
+</head>
+
+<style>
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    main {
+        display: flex;
+        width: fit-content;
+        margin: 5% auto;
+        gap: 2rem;
+    }
+
+    .button1, .button2 {
+        position: relative;
+        border: 1px solid black;
+        height: 600px;
+        width: 600px;
+        opacity: 120%;
+        border-radius: 15px;
+        overflow: hidden;
+        z-index: 0;
+    }
+
+    .button1 {
+        background: url(../index-imgs/profile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .button2 {
+        background: url(../projects/lightlayout/imgs/books.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .button1 p, .button2 p {
+        position: absolute;
+        transform: translateX(-100%);
+        transition: 1s ease all;
+        transition-delay: 0.5s;
+        cursor: pointer;
+        border-radius: 15px;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3rem;
+        width: 40%;
+        background-color: red;
+        color: white;
+        font-size: 22px;
+        bottom: 5%;
+    }
+
+    .button1:hover p, .button2:hover p {
+        transform: translateX(135%);
+        z-index: 1;
+    }
+
+</style>
+
+<body>
+    <main>
+        
+        <div class="button1">
+            <p>Button 1</p>
+        </div>
+        
+        <div class="button2">
+            <p>Button 2</p>
+        </div>
+        
+    </main>
+</body>
+</html>

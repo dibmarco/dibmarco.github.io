@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrap Column</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    header {
+        border-bottom: 1px solid;
+        display: inline-flex;
+        width: 100%;
+        height: 6vh;
+        padding: 8px;
+        position: fixed;
+        top: 0;
+        background-color: antiquewhite;
+        align-items: center;
+        z-index: 1;
+    }
+
+    main {
+        width: 84%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 6vh auto 2vh auto;
+        z-index: 0;
+    }
+
+.container {
+    margin: 20px;
+    height: 285px;
+    width: 285px;
+    background-color: beige;
+    border: 1px black solid;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    }
+
+    .img {
+        transition: 0.5s ease;
+        opacity: 97%;
+    }
+
+    .img:hover {
+        transform: scale(1.1);
+        transition: 0.3s ease;
+        opacity: 100%;
+    }
+
+</style>
+
+
+<body>
+
+    <header>
+        <nav>
+            <h1>LOGO</h1>
+        </nav>
+    </header>
+    
+    <main>
+
+        <div class="container">
+            <img src="../projects/bakery/imgs/bread.jpg" alt="bread" width="284" height="284" loading="lazy" class="img">
+        </div>
+
+        <div class="container">
+            <img src="../projects/bakery/imgs/cake.jpg" alt="bread" width="284" height="284" loading="lazy" class="img">
+        </div>
+
+        <div class="container">
+            <img src="../projects/bakery/imgs/cookies.jpg" alt="bread" width="284" height="284" loading="lazy" class="img">
+        </div>
+
+        <div class="container">
+            <img src="../index-imgs/profile.jpg" alt="bread" width="284" height="284" loading="lazy" class="img">
+        </div>
+        
+        <div class="container">
+            <img src="../projects/lightlayout/imgs/books-small.jpg" alt="bread" width="284" height="284" loading="lazy" class="img">
+        </div>
+        
+        <div class="container">
+            <img src="../projects/basicHTML/imgs/logo.jpg" alt="bread" width="284" height="284" loading="lazy" class="img">
+        </div>
+
+        <div class="container">
+            <img src="../projects/basicHTML/imgs/coffee2.jpg" alt="bread" width="284" height="284" loading="lazy" class="img">
+        </div>
+        
+        <div class="container">
+            <img src="../projects/basicHTML/imgs/coffee1.jpg" alt="bread" width="284" height="284" loading="lazy" class="img">
+        </div>
+
+    </main>
+
+</body>
+</html>

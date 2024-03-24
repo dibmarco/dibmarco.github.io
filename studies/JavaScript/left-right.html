@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Left Right</title>
+  </head>
+
+  <style>
+    main, .square {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 90vh;
+      width: 100%;
+    }
+
+    .container {
+      /* border: 1px solid black; */
+      position: relative;
+      height: 70vh;
+      width: 70vw;
+    }
+
+    .square {
+      border: 2px solid red;
+      background-color: yellow;
+      position: absolute;
+      top: 20%;
+      left: 0%;
+      right: auto;
+      height: 300px;
+      width: 300px;
+      cursor: pointer;
+    }
+  </style>
+
+  <body>
+    <main>
+      <div class="container">
+        <div class="square"><h1>Click</h1></div>
+      </div>
+    </main>
+  </body>
+
+  <script>
+    const square = document.querySelector(".square");
+
+    // const leftRight = function() {
+    //     if (squarePosition === false) {
+    //         square.style.left = "auto";
+    //         square.style.right = "0%";
+    //         squarePosition = true;
+    //     } else {
+    //         square.style.left = "0%";
+    //         square.style.right = "auto";
+    //         squarePosition = false;
+    //     }
+    // };
+    
+    let squarePosition;
+    const leftRight = () => {
+      squarePosition = !squarePosition; // Toggle 
+      square.style.right = squarePosition ? "0%" : "auto";
+      square.style.left = squarePosition ? "auto" : "0%";
+    };
+
+    square.addEventListener("click", leftRight);
+  </script>
+</html>

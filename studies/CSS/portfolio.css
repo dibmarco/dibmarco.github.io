@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+#navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+#navbar a:hover {
+    text-decoration: underline;
+}
+
+#projects a {
+    text-decoration: none;
+    color: black;
+    opacity: 100%;
+}
+
+#projects a:hover {
+    opacity: 80%;
+}
+
+#navbar {
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    z-index: 99;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-right: 1rem;
+}
+
+nav ul li {
+    padding: 1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+}
+
+#welcome-section {
+    text-align: center;
+    background-color: var(--background1-color);
+    font-size: 6rem;
+}
+
+#welcome-section p {
+    font-size: 4rem;
+}
+
+#projects {
+    text-align: center;
+    justify-content: center;
+    border-top: 5px dashed black;
+    border-bottom: 5px dashed black;
+}
+
+#work h1, #contact h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.project-tile h1 {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 4rem;
+}
+
+.my-work {
+    display: flex;
+    gap: 3rem;
+}
+
+.html, .css, .javascript {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    background-color: black;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.html h2,
+.css h2,
+.javascript h2 {
+    text-align: left;
+    position: absolute;
+    top: 3%;
+    width: 100%;
+    height: 2rem;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    padding-left: 2rem;
+}
+
+.html p,
+.css p,
+.javascript p {
+    position: absolute;
+    bottom: 45%;
+    margin-left: 1rem;
+    font-size: 2rem;
+}
+
+#contact {
+    text-align: center;
+}
+
+footer {
+    border-top: 5px dashed black;
+}
+
+@media screen and (min-width: 600px) {
+
+    .html,
+        .css,
+        .javascript {
+            width: 250px;
+            height: 250px;
+            background-color: black;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+}

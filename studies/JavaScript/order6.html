@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="extras">
+        <p>
+            <input
+                type="checkbox"
+                name="extra"
+                id="extra_onion"
+                value="Extra Onion"
+            />
+            <label for="extra1">Extra Onion</label>
+        </p>
+
+        <p>
+            <input
+                type="checkbox"
+                name="extra"
+                id="extra_cheese"
+                value="Extra Cheese"
+            />
+            <label for="extra2">Extra Cheese</label>
+        </p>
+    </div>
+
+    <script>
+    
+        const extraOnions = document.getElementById("extra_onion");
+        const extraCheese = document.getElementById("extra_cheese");
+
+        extraOnions.addEventListener('change', function () {
+                if (onion.checked) {
+                    console.log("onion");
+                } else {
+                    console.log("no onion");
+                }
+            });
+
+        extraCheese.addEventListener('change', function () {
+                if (cheese.checked) {
+                    console.log("cheese");
+                } else {
+                    console.log("no cheese");
+                }
+            });
+
+        /* cheese.addEventListener("change", function () {
+            console.log("Cheese");
+        }); */
+
+        /* document.addEventListener('DOMContentLoaded', function () {
+            const checkboxes = document.querySelectorAll('input[name="extra"]');
+            
+            checkboxes.forEach(function (checkbox) {
+                checkbox.addEventListener('change', function () {
+                    const checkedElements = Array.from(checkboxes)
+                        .filter(checkbox => checkbox.checked)
+                        .map(checkbox => checkbox.value);
+
+                    console.log("Checked elements:", checkedElements);
+                });
+            });
+        }); */
+    </script>
+</body>
+</html>

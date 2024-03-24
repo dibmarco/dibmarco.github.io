@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Selection</title>
+</head>
+
+<body>
+
+    <fieldset class="drink">
+        <legend>Select your drink?</legend>
+
+        <p>
+            <input type="radio" name="drink" id="orangejuice" value="Orange Juice">
+            <label for="orangejuice">Orange Juice</label>
+        </p>
+
+        <p>
+            <input type="radio" name="drink" id="applejuice" value="applejuice">
+            <label for="applejuice">Apple Juice</label>
+        </p>
+
+        <p>
+            <input type="radio" name="drink" id="coke" value="coke">
+            <label for="coke">Coke</label>
+        </p>
+
+    </fieldset>
+
+    <fieldset class="meal">
+        <legend>Select your meal?</legend>
+
+        <p>
+            <input type="radio" name="meal" id="regularburger" value="regularburger">
+            <label for="regularburger">Regular Burger</label>
+        </p>
+
+        <p>
+            <input type="radio" name="meal" id="happyburger" value="happyburger">
+            <label for="happyburger">Happy Burger</label>
+        </p>
+
+        <p>
+            <input type="radio" name="meal" id="doubleburger" value="doubleburger">
+            <label for="doubleburger">Double Burger</label>
+        </p>
+
+    </fieldset>
+
+    <p>Your order includes: <span id="orderContent"></span></p>
+
+    <button onclick="getSelections()">Get Selections</button>
+
+    <script>
+        function getSelections() {
+            const drinkSelection = document.querySelector('input[name="drink"]:checked');
+            const mealSelection = document.querySelector('input[name="meal"]:checked');
+
+            if (drinkSelection && mealSelection) {
+                const drinkLabel = document.querySelector('label[for="' + drinkSelection.id + '"]').innerText;
+                const mealLabel = document.querySelector('label[for="' + mealSelection.id + '"]').innerText;
+
+                const selections = {
+                    drink: drinkLabel,
+                    meal: mealLabel
+                };
+
+                document.getElementById('orderContent').innerText = `${selections.drink} and ${selections.meal}`;
+                console.log(selections);
+            } else {
+                alert("Please select both a drink and a meal.");
+            }
+        }
+    </script>
+
+    <!-- <script>
+        function getSelections() {
+            const drinkSelection = document.querySelector('input[name="drink"]:checked').value;
+            const mealSelection = document.querySelector('input[name="meal"]:checked').value;
+
+            const selections = {
+                drink: drinkSelection,
+                meal: mealSelection
+            };
+
+            console.log(selections);
+            // You can now use the 'selections' object as needed, for example, send it to a server, etc.
+        }
+    </script> -->
+
+</body>
+</html>

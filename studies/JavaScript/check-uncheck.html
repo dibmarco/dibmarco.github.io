@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check - Uncheck</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="square">Yellow</div>
+
+    <input type="radio" class="yellow" name="color" value="yellow">
+    <label for="yellow">Yellow</label>
+
+    <input type="radio" class="center" name="flex" value="center">
+    <label for="flex">Center</label>
+
+    <script>
+
+        // refactored code
+        const div = document.querySelector(".square");
+        const yellowRadio = document.querySelector(".yellow");
+        const centerRadio = document.querySelector(".center");
+
+        yellowRadio.addEventListener("click", () => {
+            yellowRadio.classList.contains("checked-yellow")
+                ? (yellowRadio.checked = false, div.style.backgroundColor = "white", yellowRadio.classList.remove("checked-yellow"))
+                : (div.style.backgroundColor = "yellow", yellowRadio.classList.add("checked-yellow"));
+        });
+
+        centerRadio.addEventListener("click", () => {
+            centerRadio.classList.contains("checked-center")
+                ? (centerRadio.checked = false, div.style.display = "block", centerRadio.classList.remove("checked-center"))
+                : (div.style.display = "flex", div.style.alignItems = "center", div.style.justifyContent = "center", centerRadio.classList.add("checked-center"));
+        });
+
+
+        // 1st attempt
+        // const div = document.querySelector(".square");
+        // const yellowRadio = document.querySelector(".yellow");
+        // const centerRadio = document.querySelector(".center");
+
+        // yellowRadio.addEventListener("click", function (event) {
+        //     if (!yellowRadio.classList.contains("checked-yellow")) {
+        //         div.style.backgroundColor = "yellow";
+        //         yellowRadio.classList.add("checked-yellow");
+        //     } else {
+        //         yellowRadio.checked = false;
+        //         div.style.backgroundColor = "white";
+        //         yellowRadio.classList.remove("checked-yellow");
+        //     };
+        // });
+
+        // centerRadio.addEventListener("click", function (event) {
+        //     if (!centerRadio.classList.contains("checked-center")) {
+        //         div.style.display = "flex";
+        //         div.style.alignItems = "center";
+        //         div.style.justifyContent = "center";
+        //         centerRadio.classList.add("checked-center");
+        //     } else {
+        //         centerRadio.checked = false;
+        //         div.style.display = "block";
+        //         centerRadio.classList.remove("checked-center");
+        //     };
+        // });
+    </script>
+</body>
+</html>

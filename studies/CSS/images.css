@@ -1,0 +1,65 @@
+/*Begin Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+/*End Reset*/
+
+/*Utility Classes*/
+.nowrap {
+    white-space: nowrap;
+}
+
+.offscreen {
+    position: absolute;
+    left: -1000px;
+}
+/*End Utility Classes*/
+
+body {
+    font-family: monospace;
+    min-height: 100vh;
+}
+
+
+.container {
+    /*background-color: blanchedalmond;*/
+    background-image: url(../projects/basicHTML/imgs/coffee2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero {
+    display: flex;
+    border-bottom: 2px solid black;
+    padding: 20px;
+    justify-content: start;
+    justify-content: center;
+    gap: 30px;
+    background-color: rgba(255, 228, 196, 0.150);
+}
+
+.h1 {
+    font-size: 500%;
+    color: white;
+    text-shadow: 2px 2px 5px brown;
+}
+
+.profilepic {
+    width: 35%;
+}
+
+.profilepic img {
+    width: 100%;
+    height: auto;
+    min-width: 100px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+

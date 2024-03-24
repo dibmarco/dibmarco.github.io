@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer</title>
+  </head>
+
+  <style>
+    main {
+      margin: 0 auto;
+      width: 900px;
+    }
+  </style>
+
+  <body>
+    <main>
+      <img
+        src="../JavaScript/imgs/alaska1.jpg"
+        alt="alaska"
+        data-photo="1"
+        width="900px"
+      />
+      <button id="previous">&lt;</button>
+      <button id="next">&gt;</button>
+    </main>
+
+    <script>
+      const img = document.querySelector("img");
+      const next = document.getElementById("next");
+      const previous = document.getElementById("previous");
+
+      const changePhoto = () => {
+        img.src.endsWith("/JavaScript/imgs/alaska1.jpg")
+          ? (img.src = "../JavaScript/imgs/alaska4.jpg")
+          : (img.src = "../JavaScript/imgs/alaska1.jpg");
+      };
+
+      let timeOut;
+      let intervalId;
+      // Initial start
+      intervalId = setInterval(changePhoto, 1000);
+
+      const resumeInterval = () => {
+        clearInterval(intervalId);
+        intervalId = setInterval(changePhoto, 1000);
+      };
+
+      next.addEventListener("click", () => {
+        clearTimeout(timeOut);
+        clearInterval(intervalId);
+        changePhoto();
+        setTimeout(resumeInterval, 3000);
+      });
+
+      previous.addEventListener("click", () => {
+        clearTimeout(timeOut);
+        clearInterval(intervalId);
+        changePhoto();
+        setTimeout(resumeInterval, 3000);
+      });
+    </script>
+  </body>
+</html>

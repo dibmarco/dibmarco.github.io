@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    main {
+        position: relative;
+        margin: 0 auto;
+        width: 400px;
+        overflow: hidden;
+    }
+
+    div {
+        display: flex;
+        background-color: black;
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    aside {
+        transform: translateX(-500px);
+        transition: 1s ease all;
+        transition-delay: 0.5s;
+    }
+
+    div:hover+aside {
+        transform:translateX(100px);
+    }
+
+</style>
+
+<body>
+    <main>
+        <section>
+            <h1>Side Bar</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, quia.</p>
+
+            <div>
+                <p>Button</p>
+            </div>
+
+            <aside>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </aside>
+
+        </section>
+    </main>
+</body>
+
+</html>

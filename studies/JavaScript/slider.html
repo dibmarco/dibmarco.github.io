@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      /* border: 1px solid black; */
+      overflow: hidden;
+    }
+
+    .slide {
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      /* border: 1px solid orangered; */
+      transition: 0.5s ease;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .slide1 {
+      background-color: black;
+      background-image: url(../JavaScript/imgs/alaska1.jpg);
+    }
+
+    .slide2 {
+      /* left: 100%; */
+      background-color: blue;
+      background-image: url(../JavaScript/imgs/alaska2.jpg);
+    }
+
+    .slide3 {
+      /* left: 200%; */
+      background-color: red;
+      background-image: url(../JavaScript/imgs/alaska3.jpg);
+    }
+
+    .slide4 {
+      /* left: 300%; */
+      background-color: brown;
+      background-image: url(../JavaScript/imgs/alaska4.jpg);
+    }
+
+    .button-right,
+    .button-left {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: white;
+      top: 50%;
+      right: 20px;
+      z-index: 1;
+      cursor: pointer;
+      color: black;
+      font-size: 48px;
+      opacity: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .button-left {
+      left: 20px;
+    }
+
+    /* .button-right:active, .button-left:active {
+        transform: scale(0.9);
+    } */
+
+    .button-right:hover,
+    .button-left:hover {
+      opacity: 100%;
+    }
+
+    .button-right:focus,
+    .button-left:focus {
+      border: 1px solid black;
+    }
+
+    .dots {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      /* border: 1px solid yellow; */
+      position: absolute;
+      width: 300px;
+      height: 100px;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .dots__dot {
+      width: 30px;
+      height: 30px;
+      /* border: 1px solid black; */
+      border-radius: 50%;
+      border-style: none;
+      opacity: 60%;
+      cursor: pointer;
+    }
+
+    .dots__dot--active {
+      opacity: 100%;
+    }
+  </style>
+
+  <body>
+    <main>
+      <div class="container">
+        <button class="button-right">&#8594;</button>
+        <button class="button-left">&#8592;</button>
+        <div class="slide slide1"></div>
+        <div class="slide slide2"></div>
+        <div class="slide slide3"></div>
+        <div class="slide slide4"></div>
+        <div class="dots"></div>
+      </div>
+    </main>
+  </body>
+
+  <script>
+    const slides = document.querySelectorAll(".slide");
+    const btnRight = document.querySelector(".button-right");
+    const btnLeft = document.querySelector(".button-left");
+    const dotContainer = document.querySelector(".dots");
+
+    const createDots = () => {
+      slides.forEach((_, i) => {
+        dotContainer.insertAdjacentHTML(
+          "beforeend",
+          `<button class="dots__dot" data-slide="${i}"></button>`
+        );
+      });
+      document.querySelector(".dots__dot").classList.add("dots__dot--active");
+    };
+
+    const activateDot = (slide) => {
+      document
+        .querySelectorAll(".dots__dot")
+        .forEach((dot) => dot.classList.remove("dots__dot--active"));
+
+      document
+        .querySelector(`.dots__dot[data-slide="${slide}"]`)
+        .classList.add("dots__dot--active");
+    };
+
+    const changeSlide = () => {
+      slides.forEach(
+        (slide, i) =>
+          (slide.style.transform = `translateX(${100 * (i - curSlide)}%)`)
+      );
+    };
+
+    const moveSlide = (direction) => {
+      direction === "right"
+        ? (curSlide = (curSlide + 1) % slides.length)
+        : (curSlide = (curSlide - 1 + slides.length) % slides.length);
+      changeSlide();
+      activateDot(curSlide);
+    };
+
+    const applyScaleEffect = (button) => {
+      button.style.transform = "scale(0.9)";
+    };
+
+    const removeScaleEffect = (button) => {
+      button.style.transform = "scale(1)";
+    };
+
+    const handleButtonInteraction = (button, direction) => {
+      button.addEventListener("mousedown", () => {
+        applyScaleEffect(button);
+        moveSlide(direction);
+      });
+      button.addEventListener("mouseup", () => {
+        removeScaleEffect(button);
+      });
+    };
+
+    const handleKeyPress = (e) => {
+      if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+        applyScaleEffect(e.key === "ArrowRight" ? btnRight : btnLeft);
+        moveSlide(e.key === "ArrowRight" ? "right" : "left");
+      }
+    };
+
+    const handleKeyUp = (e) => {
+      if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+        removeScaleEffect(e.key === "ArrowRight" ? btnRight : btnLeft);
+      }
+    };
+
+    const handleDotClick = (e) => {
+      if (e.target.classList.contains("dots__dot")) {
+        const slide = parseInt(e.target.dataset.slide);
+        curSlide = slide;
+        changeSlide();
+        activateDot(slide);
+      }
+    };
+
+    let curSlide = 0;
+
+    createDots();
+
+    slides.forEach(
+      (slide, i) => (slide.style.transform = `translateX(${100 * i}%)`)
+    );
+    activateDot(curSlide);
+
+    handleButtonInteraction(btnRight, "right");
+    handleButtonInteraction(btnLeft, "left");
+
+    document.addEventListener("keydown", handleKeyPress);
+    document.addEventListener("keyup", handleKeyUp);
+    dotContainer.addEventListener("click", handleDotClick);
+  </script>
+</html>

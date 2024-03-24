@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+* {
+    text-align: center;
+}
+
+    /* Define the container for the divs */
+.container {
+  display: flex; /* Use flexbox */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: space-between; /* Space items evenly along the main axis */
+}
+
+/* Define the style for the image divs */
+.image-div {
+  height: 400px;
+  width: 400px;
+}
+
+/* Define the style for the text divs */
+.text-div {
+  height: 400px;
+  width: 400px;
+}
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="image-div">
+            <img src="./img1.jpg" alt="Image 1" height="400px" width="400px">
+        </div>
+        <div class="text-div">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet dui non neque dictum, sit amet
+                rutrum sapien pulvinar. Maecenas ut enim a tellus bibendum laoreet vel sit amet purus.</p>
+        </div>
+        <div class="image-div">
+            <img src="./img2.png" alt="Image 2" height="400px" width="400px">
+        </div>
+        <div class="text-div">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet dui non neque dictum, sit amet
+                rutrum sapien pulvinar. Maecenas ut enim a tellus bibendum laoreet vel sit amet purus.</p>
+        </div>
+    </div>
+</body>
+</html>

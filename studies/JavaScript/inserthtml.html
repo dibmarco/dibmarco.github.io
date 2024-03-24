@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Adjacent HTML</title>
+</head>
+
+<style>
+    .text_area {
+        width: 210px;
+        min-height: 30px;
+        height: fit-content;
+        border: 1px solid black;
+        margin-top: 10px;
+    }
+
+    .post_text {
+        border-top: 1px dashed red;
+    }
+
+    .post_delete {
+        text-align: right;
+        font-size: 14px;
+    }
+
+    .clear_all:hover, .post_delete:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="input">
+        <input type="text" class="input_text"><button class="post_button">Post</button>
+    </div>
+    <div class="text_area"></div>
+    <p class="clear_all">Clear all</p>
+
+    <script>
+        const postInput = document.querySelector(".input_text");
+        const postBtn = document.querySelector(".post_button");
+        const textArea = document.querySelector(".text_area");
+        const clearAll = document.querySelector(".clear_all");
+        
+
+        
+        postBtn.addEventListener("click", function() {
+            
+            const postContent = postInput.value;
+            postInput.value = "";
+            console.log(postContent);
+
+            const html = `
+                <div class="post_div"> 
+                    <p class="post_text">${postContent}</p>
+                    <p class="post_delete">delete</p>
+                </div>
+            `;
+
+            textArea.insertAdjacentHTML("afterbegin", html);
+
+            const postDiv = document.querySelectorAll(".post_div");
+            /* console.log(postDiv); */
+            
+            const deleteBtn = document.querySelectorAll(".post_delete");
+            /* console.log(deleteBtn); */
+
+            console.log(postDiv, deleteBtn);
+
+            deleteBtn.forEach(function (del, i) {
+                del.addEventListener('click', function () {
+                /* console.log("Yes"); */
+                postDiv[i].innerHTML = "";
+                console.log(postDiv, deleteBtn);
+                });
+
+            });
+
+            // for (let i = 0; i < deleteBtn.length; i++)
+            // deleteBtn[i].addEventListener('click', function() {
+            //     /* console.log("Yes"); */
+            //     postDiv[i].innerHTML = "";
+
+            // });
+
+        });
+
+        
+        clearAll.addEventListener("click", function () {
+            textArea.innerHTML = "";
+        });
+        
+
+    </script>
+</body>
+</html>

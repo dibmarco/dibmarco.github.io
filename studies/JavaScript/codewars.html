@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeWars</title>
+  </head>
+  <style>
+    body {
+      font-family: monospace;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100%;
+    }
+  </style>
+  <main>
+    <h1>CodeWars</h1>
+  </main>
+  <body>
+    <script>
+      //   //CodeWars #1
+      //   function abbrevName(name) {
+      //   return name.toUpperCase().split(" ").map(name => name[0]).join('.');
+      //   }
+      //   console.log(abbrevName("Perry Mason"));
+
+      // //CodeWars #2
+      // arrCodeWars = [2, 2, 2];
+
+      // // function 1 - long (with for loop)
+      // function grow(arr) {
+      //   let total = 1;
+      //   for (let i = 0; i < arr.length; i++) {
+      //     total *= arr[i];
+      //   }
+      //   return total;
+      // }
+      // console.log(grow(arrCodeWars));
+
+      // // function 2 - long (with reduce)
+      // const reduceCW = function (arr) {
+      //   return arr.reduce(function (acc, cur) {
+      //     return acc * cur;
+      //   }, 1);
+      // };
+      // console.log(reduceCW(arrCodeWars));
+
+      // function 2 - short (with reduce)
+      /* const reduceCW = (arr) => arr.reduce((acc, cur) => acc * cur, 1);
+      console.log(reduceCW(arrCodeWars)); */
+
+      // const namePlay = (name) => {
+      //     userName = name;
+      //     /* userName = name.slice(0, 3); */
+      //     /* userName = name.split(" "); */
+      //     console.log(userName);
+      //     console.log(userName.indexOf("R"));
+      //     console.log(userName.indexOf("r"));
+      //     console.log(userName.indexOf("Jr"));
+      //     console.log(userName.lastIndexOf("r"));
+      //     console.log(userName.slice(7, 9));
+      //     console.log(userName.at(3));
+      //     console.log(userName[3]);
+      //     console.log(userName.replace("Jr", "Sr"));
+      //     console.log(userName.replaceAll("r", "b"));
+      //     console.log(userName.includes("o"));
+      //     console.log(userName.includes("g"));
+      //     console.log(userName.startsWith("g"));
+      // }
+      // namePlay("Robert Jr");
+
+      // const name = "Marco Dib";
+      // const email = '@gmail.com'
+      // console.log(name.toLowerCase().split(" ").join(".") + email);
+      // console.log(name.toLowerCase().split(" ").join(" "));
+      // console.log(name.split(" ").splice(0, 1));
+      // console.log(name.split(" ").splice(1));
+
+      //   // // Name Capitalization
+      //   // const name2 = "tyler durden"
+      //   const capitalizedName = (name) => {
+      //     const names = name.split(" ");
+      //     /* console.log(names); */
+      //     const namesUpper = [];
+
+      //     for (const n of names) {
+      //       // namesUpper.push(n[0].toUpperCase() + n.slice(1));
+      //       namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
+      //     }
+
+      //     console.log(namesUpper);
+      //     return namesUpper.join(" ");
+      //   };
+      //   console.log(capitalizedName("tyler durden"));
+      //   console.log(capitalizedName("jon bon jovi"));
+
+      // const name3 = "mike tyson";
+      // const capitalizedName2 = (name) => {
+      //   const names = name.split(" ");
+      //   firstName = names[0];
+      //   lastName = names[1];
+      //   firstNameUpper = firstName.replace(
+      //     firstName[0],
+      //     firstName[0].toUpperCase()
+      //   );
+      //   lastNameUpper = lastName.replace(
+      //     lastName[0],
+      //     lastName[0].toUpperCase()
+      //   );
+      //   return `${firstNameUpper} ${lastNameUpper}`;
+      // };
+      // console.log(capitalizedName2(name3));
+
+      //   // Credit Card
+      //   // const maskCreditCard = (cardNumber) => {
+      //   //     const string = String(cardNumber);
+      //   //     const lastDigits = string.slice(-4);
+      //   //     // console.log(lastDigits);
+      //   //     return lastDigits.padStart(string.length, "*");
+      //   // }
+      //   // console.log(maskCreditCard(546687964453621));
+
+      //   const maskCreditCard = (cardNumber) => {
+      //     const string = cardNumber.toString();
+      //     const lastDigits = string.slice(-4);
+      //     console.log(lastDigits);
+      //     return lastDigits.padStart(string.length, "*");
+      //   };
+      //   console.log(maskCreditCard(546687964453621));
+      //   /* console.log(maskCreditCard(12345)); */
+
+      // LOOPING ARRAYS
+      // const arrNames = ["Luiz", "Linda", "Afonso"];
+      // console.log(arrNames);
+
+      // // for loop
+      // for (let i = 0; i < arrNames.length; i++) {
+      //   console.log(arrNames[i]);
+      // }
+
+      // // for of loop
+      // for (const name of arrNames) {
+      //   console.log(`${name} da Silva`);
+      // }
+
+      // // forEach loop
+      // arrNames.forEach((name, i) => console.log(`${i + 1} ${name} Dib`));
+
+      // // MAP
+      // arrNames.map((name, i) => console.log(`${i + 1} ${name} Pereira`));
+      // const arrPereira = arrNames.map((name, i) => `${i} ${name} Pereira`);
+      // console.log(arrPereira);
+      // console.log(arrPereira.splice(1));
+
+      // // FILTER
+      // console.log(arrNames.filter((name) => name.includes("Luiz")));
+
+      // const arrNumbers = [203, -12, 77, 0, 1];
+      // /* const arrFiltered = arrNumbers.filter(function (number) {
+      //   return number > 0;
+      // }); */
+      // const arrFiltered = arrNumbers.filter((number) => number > 0);
+      // console.log(arrNumbers);
+      // console.log(arrFiltered);
+
+      // // REDUCE
+      // console.log(arrNumbers);
+
+      // /* const arrReduced = arrNumbers.reduce(function(accumulator, current, i, arr) {
+      //   return accumulator + current;
+      // }, 0);
+      // console.log(arrReduced); */
+
+      // const arrReduced = arrNumbers.reduce((acc, cur) => acc + cur, 0);
+      // console.log(arrReduced);
+
+      // // FIND
+      // const arrNames2 = ["Luiz", "Linda", "Afonso"];
+      // const findLuiz = arrNames2.find((name) => name === "Luiz");
+      // console.log(findLuiz);
+
+      // const index = arrNames2.findIndex((name) => name === "Luiz");
+      // console.log(index);
+
+      // // Chaining methods (filter, map, reduce)
+      // console.log(
+      //   arrNumbers
+      //     .filter((number) => number > 0)
+      //     .map((number) => number * 2)
+      //     .reduce((acc, cur) => acc + cur, 0)
+      // );
+
+      // // CodeWars #3
+      // const greet = () => "hello world!";
+      // console.log(greet());
+
+      // // CodeWars #4
+
+      // //In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+
+      // const makeNegative = (number) => (number > 0 ? number * -1 : number);
+      // console.log(makeNegative(12));
+
+      // // // alternative solution
+      // // function makeNegative(num) {
+      // //   return -Math.abs(num);
+      // // }
+
+      // CodeWars #5
+
+      //Rock Paper Scissors. Let's play! You have to return which player won! In case of a draw return Draw!.
+
+      // const rps = (p1, p2) => {
+      //   if (p1 === "scissors" && p2 === "paper") {
+      //     return "Player 1 won!";
+      //   }
+      //   if (p1 === "paper" && p2 === "scissors") {
+      //     return "Player 2 won!";
+      //   }
+      //   if (p1 === "rock" && p2 === "scissors") {
+      //     return "Player 1 won!";
+      //   }
+      //   if (p1 === "scissors" && p2 === "rock") {
+      //     return "Player 2 won!";
+      //   }
+      //   if (p1 === "paper" && p2 === "rock") {
+      //     return "Player 1 won!";
+      //   }
+      //   if (p1 === "rock" && p2 === "paper") {
+      //     return "Player 2 won!";
+      //   }
+      //   if (p1 === p2) {
+      //     return "Draw!";
+      //   }
+      // };
+
+      // // // Alternative solution
+      // // const rps = (p1, p2) => {
+      // //   if (p1 == p2) return "Draw!";
+
+      // //   if (p1 == "rock" && p2 == "scissors") return "Player 1 won!";
+      // //   else if (p1 == "scissors" && p2 == "paper") return "Player 1 won!";
+      // //   else if (p1 == "paper" && p2 == "rock") return "Player 1 won!";
+      // //   else return "Player 2 won!";
+      // // };
+
+      // console.log(rps("paper", "rock"));
+
+      // CodeWars #6
+
+      // Create a function that gives a personalized greeting. This function takes two parameters: name and owner. Use conditionals to return the proper message: name equals owner	'Hello boss,'otherwise	'Hello guest'
+
+      /* const greet = (name, owner) => (name === owner) ? "Hello boss" : "Hello guest"; */
+
+      // // Alternative solution
+      // const greet = (name, owner) => `Hello ${name === owner ? "boss" : "guest"}`;
+      // console.log(greet("john", "john"));
+
+      // // CodeWars #7
+      // // Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+
+      // const reverseNumber = function (num) {
+      //   // const number = String(num).split("").sort((a, b) => b - a);
+      //   const number = String(num).split("").map(Number).reverse();
+      //   return number;
+      // };
+
+      // const reverseNumber = num => String(num).split("").map(Number).reverse();
+
+      // console.log(reverseNumber(7953));
+      // console.log(reverseNumber(0));
+
+      // // CodeWars #8
+      // // You get an array of numbers, return the sum of all of the positives ones. Example [1, -4, 7, 12] -> 1 + 7 + 12 = 20.
+
+      // const testArray1 = [1, -4, 7, 12];
+      // const testArray2 = [];
+
+      // const positiveSum = function (arr) {
+      //   const reduced = arr.map((num) => Math.abs(num)).reduce((acc, cur) => acc + cur, 0);
+      //   return reduced;
+      // };
+
+      // // The Math.abs() method in JavaScript returns the absolute value of a number. The absolute value of a number is its distance from 0 on the number line, regardless of direction. In other words, it returns the non-negative value of the number.
+
+      // const positiveSum = function (arr) {
+      //   const reducePositives = arr.filter(num => num > 0).reduce((acc, cur) => acc + cur, 0);
+      //   return reducePositives;
+      // }
+
+      // console.log(positiveSum(testArray1));
+      // console.log(positiveSum(testArray2));
+
+      // // CodeWars #9
+      // // Complete the square sum function so that it squares each number passed into it and then sums the results together.
+      // // For example, for [1, 2, 2] it should return 9.
+
+      // const testArray1 = [2, 7, 12];
+
+      // // const squareSum = function (numbers){
+      // //   return numbers.map(number => number ** 2).reduce((acc, cur) => acc + cur, 0);
+      // // };
+
+      // const squareSum = (numbers) => numbers.map(number => number ** 2).reduce((acc, cur) => acc + cur, 0);
+
+      // console.log(squareSum(testArray1));
+
+      // CodeWars #10
+      // You ask a small girl,"How old are you?" She always says, "x years old", where x is a random number between 0 and 9. Write a program that returns the girl's age (0-9) as an integer. Assume the test input string is always a valid string. For example, the test input may be "1 year old" or "5 years old". The first character in the string is always a number.
+
+      // const getAge = function () {
+      //   // return the girl's correct age as an integer. Happy coding :)
+      //   return `${Math.trunc(Math.random()*9 + 1)} years old`;
+      // };
+
+      // console.log(getAge())
+
+      // const stringPosition0 = function (string) {
+      //   return string.charAt(0);
+      // };
+
+      // console.log(stringPosition0("Marco"));
+
+      // function getGirlsAge(inputString) {
+      //   // Extract the first character (age) from the input string
+      //   const ageChar = inputString.charAt(0);
+
+      //   // Convert the character to an integer
+      //   const age = parseInt(ageChar, 10);
+
+      //   return age;
+      // }
+
+      // // Example usage:
+      // const input1 = "3 years old";
+      // const input2 = "8 years old";
+
+      // const age1 = getGirlsAge(input1);
+      // const age2 = getGirlsAge(input2);
+
+      // console.log(age1); // Output: 3
+      // console.log(age2); // Output: 8
+    </script>
+  </body>
+</html>

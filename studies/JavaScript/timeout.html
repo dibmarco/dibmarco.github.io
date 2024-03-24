@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="timeout">Time Out</button>
+    
+    <script>
+        const timeOutBtn = document.querySelector(".timeout");
+        let timeOut;
+
+        timeOutBtn.addEventListener("click", () => {
+            // Clear any existing timeout before setting a new one
+            clearTimeout(timeOut);
+            
+            // Set a new timeout when the button is clicked
+            timeOut = setTimeout(() => console.log("Timeout"), 2000);
+        });
+    </script>
+</body>
+</html

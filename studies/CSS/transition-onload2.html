@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Coffee Joint</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    main {
+        display: flex;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .left {
+        display: flex;
+        align-items: center;
+        background-color: black;
+        color: white;
+        width: 25vw;
+    }
+
+
+    .container p {
+        font-family: monospace;
+        font-size: clamp(15px, 85px, 100px);
+        font-weight: bolder;
+        padding: 1rem 0 0 2rem;
+    }
+
+    .right {
+        width: 75vw;
+    }
+
+    .image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .the {
+        animation: transitionIn 0.75s;
+    }
+    
+    .coffee {
+        animation: transitionIn 2s;
+    }
+    
+    .joint {
+        animation: transitionIn 2.45s;
+    }
+
+
+    @keyframes transitionIn {
+        
+        from {
+            opacity: 0;
+            /* transform: rotateX(-10deg); */
+            /* transform: translateY(-5px); */
+        }
+
+        to {
+            opacity: 1;
+            /* transform: rotateX(0deg); */
+            /* transform: translateY(0); */
+        }
+
+    }
+</style>
+
+<body>
+    <main>
+        <section class="left">
+            <div class="container">
+            <p class="the">The</p>
+            <p class="coffee">Coffee</p>
+            <p class="joint">Joint</p>
+            </div>
+        </section>
+        <section class="right">
+            <div class="image">
+                <img src="../projects/basicHTML/imgs/coffeeshop.jpg" alt="coffee shop">
+            </div>
+        </section>
+    </main>
+</body>
+</html>

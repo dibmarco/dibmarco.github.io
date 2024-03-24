@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    main {
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        gap: 10px;
+    }
+
+    button {
+        height: 30px;
+        width: 80px;
+    }
+
+    .container {
+        position: relative;
+        display: flex;
+        width: 300px;
+        height: 200px;
+        border: 3px solid black;
+        /* overflow: hidden; */
+    }
+
+    .red, .blue, .green {
+        width: 300px;
+        height: 200px;
+        transition: 1s all ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .red {
+        position: absolute;
+        background-color: red;
+        
+    }
+
+    .blue {
+        position: absolute;
+        background-color: blue;
+        left: 100%;
+        
+    }
+
+    .green {
+        position: absolute;
+        background-color: green;
+        left: 100%;
+        
+    }
+
+    .transform-left {
+        transform: translateX(-100%);
+    }
+    
+    .position-right {
+        left: 100%;
+    }
+    
+    
+
+</style>
+
+<body>
+    <main>
+        <button class="btnLeft">&lt;&lt;</button>
+        <div class="container">
+            <div class="red"><img src="../CSS/imgs/bjj.jpg" alt="" width="150px"></div>
+            <div class="blue"><img src="../CSS/imgs/coffee.png" alt="" width="150px"></div>
+            <div class="green"><img src="../JavaScript/imgs/shoe-3.png" alt="" width="150px"></div>
+        </div>
+        <!-- <button class="btnRight">&gt;&gt;</button> -->
+    </main>
+    <script src="transition.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation 1</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: monospace;
+      }
+
+      main {
+        margin: 0 auto;
+        width: 200px;
+        text-align: center;
+        font-size: 22px;
+        /* background-color: antiquewhite; */
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        width: 100%;
+        /* border: 1px solid black; */
+        margin-top: 20px;
+
+        position: relative;
+
+        cursor: pointer;
+      }
+
+      nav::before,
+      nav::after {
+        content: "";
+        width: 20px;
+        height: 3px;
+        background-color: black;
+      }
+
+      .arrow-up {
+        transform: translateY(5px);
+      }
+
+      ul {
+        position: absolute;
+        top: 40px;
+        /* border: 1px solid red; */
+
+        width: 100%;
+        list-style: none;
+      }
+
+      ul > li {
+        margin-top: 10px;
+        border-bottom: 1px solid black;
+        animation: fadein 0.5s forwards; /* Added forwards to maintain end state */
+        opacity: 0;
+      }
+
+      span > svg {
+        width: 20px;
+      }
+
+      @keyframes fadein {
+        from {
+          opacity: 0;
+          transform: translateY(-25px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <nav class="open-close-button">
+        Menu
+        <span
+          ><svg
+            class="arrow-down"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+          >
+            <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"
+            />
+          </svg>
+          <svg
+            class="arrow-up hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+          >
+            <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z"
+            />
+          </svg>
+        </span>
+
+        <ul class="menu hidden">
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ul>
+      </nav>
+    </main>
+
+    <script>
+      const openCloseBtn = document.querySelector(".open-close-button");
+      const arrowUp = document.querySelector(".arrow-up");
+      const arrowDown = document.querySelector(".arrow-down");
+      const menu = document.querySelector(".menu");
+      const listItems = document.querySelectorAll("li");
+
+      function toggleHidden() {
+        menu.classList.toggle("hidden");
+        arrowDown.classList.toggle("hidden");
+        arrowUp.classList.toggle("hidden");
+      }
+
+      openCloseBtn.addEventListener("click", toggleHidden);
+
+      listItems.forEach((li, index) => {
+        /* console.log(index); */
+        li.style.animationDelay = `${index * 0.5}s`;
+      });
+    </script>
+  </body>
+</html>
